@@ -1,0 +1,111 @@
+/* 2026-11-14 開場封面：好萊塢片廠開場 × 華語影業（老師指定）＋背景音樂開關。獨立覆蓋層，不動生成器本頁
+   毛筆字：正風毛筆字體 MasaFont（SIL OFL 1.1，fonts/README_字型授權.txt），只取用到的字做成子集 */
+@font-face{font-family:"MasaBrush";src:url("fonts/masa-brush.woff") format("woff");font-display:swap}
+/* 落款：莫大毛筆字體（OFL）；「曾」改用馬善政毛筆楷（OFL，上面兩點清楚，老師不喜歡行書的曾） */
+@font-face{font-family:"CreditBrush";src:url("fonts/msz-zeng.woff") format("woff");unicode-range:U+66FE;font-display:swap}
+@font-face{font-family:"CreditBrush";src:url("fonts/bakudai-brush.woff") format("woff");font-display:swap}
+
+#vgIntro{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;color:#fff;
+  font-family:system-ui,-apple-system,"Segoe UI","Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+  background:radial-gradient(ellipse at 50% 40%,#1b2a5c 0%,#0b1230 45%,#03050f 100%)}
+#vgIntro[hidden]{display:none}
+
+/* 背景圖（AI 生成原創：地球＋膠卷環、火炬雕像、金像獎座、探照燈、紅金祥雲、宮門燈籠）＋緩慢推近 */
+#vgIntro .vi-bg{position:absolute;left:0;right:0;top:46px;bottom:46px;background:url("img/cover_bg.webp?v=3") center top/cover no-repeat;transform-origin:50% 100%;
+  opacity:0;animation:viBgIn 1.6s ease forwards,viKen 26s ease-in-out 1.6s infinite alternate}
+#vgIntro .vi-shade{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 70% 38% at 50% 52%,rgba(3,5,15,.55),rgba(3,5,15,0) 70%),
+             linear-gradient(180deg,rgba(3,5,15,.55) 0%,rgba(3,5,15,0) 22%,rgba(3,5,15,0) 70%,rgba(3,5,15,.75) 100%)}
+
+/* 探照燈 */
+#vgIntro .vi-beam{position:absolute;bottom:-6%;width:9vmax;height:120vmax;pointer-events:none;mix-blend-mode:screen;transform-origin:50% 100%;
+  background:linear-gradient(0deg,rgba(255,236,170,.32),rgba(255,236,170,.07) 50%,rgba(255,236,170,0) 85%);
+  clip-path:polygon(47% 100%,53% 100%,100% 0,0 0);filter:blur(14px)}
+#vgIntro .vi-beam.l{left:8%;animation:viSweepL 7s ease-in-out infinite alternate}
+#vgIntro .vi-beam.r{right:8%;animation:viSweepR 8s ease-in-out infinite alternate}
+
+/* 金色光點 */
+#vgIntro .vi-stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 6px #ffd76a;opacity:0;animation:viTwinkle 3s ease-in-out infinite}
+
+/* 上下兩條會走的膠卷 */
+#vgIntro .vi-film{position:absolute;left:0;right:0;height:46px;overflow:hidden;background:#120c06;
+  box-shadow:0 0 0 2px #3b2a12 inset,0 6px 24px rgba(0,0,0,.6);opacity:.92}
+#vgIntro .vi-film.top{top:0}
+#vgIntro .vi-film.bot{bottom:0}
+#vgIntro .vi-film i{position:absolute;top:0;bottom:0;left:0;width:calc(100% + 120px);
+  background:
+    repeating-linear-gradient(90deg,#f1e2b8 0 14px,transparent 14px 30px) 0 6px/100% 8px no-repeat,
+    repeating-linear-gradient(90deg,#f1e2b8 0 14px,transparent 14px 30px) 0 32px/100% 8px no-repeat,
+    repeating-linear-gradient(90deg,rgba(255,196,90,.18) 0 116px,#2a1d0c 116px 120px) 0 15px/100% 16px no-repeat;
+  animation:viFilm 6s linear infinite}
+#vgIntro .vi-film.bot i{animation-direction:reverse}
+
+#vgIntro .vi-card{position:relative;text-align:center;padding:24px 16px;max-width:94vw;margin-top:16vh}
+#vgIntro .vi-pre{margin:0 0 6px;font-family:"MasaBrush",serif;font-size:clamp(20px,2.6vw,30px);letter-spacing:.4em;color:#f3d48a;
+  text-shadow:0 2px 12px rgba(0,0,0,.8);opacity:0;animation:viFade .9s ease both .5s}
+/* 主標：毛筆字＋燙金 */
+#vgIntro h1{margin:0 0 8px;font-family:"MasaBrush","Microsoft JhengHei",serif;font-weight:400;font-size:clamp(46px,min(7.6vw,12.5vh),124px);letter-spacing:.06em;line-height:1.15;
+  filter:drop-shadow(0 4px 2px rgba(60,30,0,.85)) drop-shadow(0 0 28px rgba(255,190,80,.45))}
+#vgIntro h1 span{display:inline-block;opacity:0;animation:viRise .7s cubic-bezier(.2,.8,.2,1) both;
+  background-image:linear-gradient(180deg,#fff6d6 0%,#ffd76a 38%,#c8891d 62%,#fff0b8 80%,#b8741a 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+#vgIntro .vi-sub{margin:0 0 30px;font-size:clamp(16px,2.2vw,24px);letter-spacing:.38em;color:#f6e7c0;text-shadow:0 2px 10px rgba(0,0,0,.9);opacity:0;animation:viFade .8s ease both 2s}
+#vgIntro .vi-go{font:inherit;font-weight:800;font-size:clamp(19px,2.4vw,25px);letter-spacing:.16em;padding:15px 44px;border:0;border-radius:999px;cursor:pointer;color:#3a1a00;
+  background:linear-gradient(180deg,#fff2c4,#ffcf5a 45%,#d58f1e);box-shadow:0 0 0 0 rgba(255,200,90,.7),0 14px 40px -10px rgba(200,40,30,.8),0 0 0 2px #fff3c9 inset;
+  opacity:0;animation:viFade .7s ease both 2.4s,viPulse 2s ease-in-out infinite 3.1s}
+#vgIntro .vi-go:hover{filter:brightness(1.08)}
+#vgIntro .vi-go:focus-visible{outline:3px solid #fff;outline-offset:4px}
+#vgIntro .vi-note{display:block;margin-top:14px;font-size:14px;color:#e8d9b0;letter-spacing:.08em;text-shadow:0 1px 6px #000;opacity:0;animation:viFade .7s ease both 2.6s}
+
+/* 右下角落款：毛筆「曾慶良（阿亮老師）出品」（11/14 老師指定：不寫監製人、不要印章） */
+#vgIntro .vi-credit{position:absolute;right:clamp(16px,3vw,44px);bottom:clamp(60px,9vh,96px);display:flex;align-items:baseline;gap:.35em;
+  font-family:"CreditBrush",serif;color:#fbe7b0;text-shadow:0 2px 10px rgba(0,0,0,.95),0 0 18px rgba(255,190,80,.35);opacity:0;animation:viFade 1s ease both 2.9s}
+#vgIntro .vi-role{font-size:clamp(24px,2.6vw,38px);letter-spacing:.12em;margin-left:.2em;background:linear-gradient(180deg,#fff6d6,#ffd76a 45%,#c8891d);-webkit-background-clip:text;background-clip:text;color:transparent}
+#vgIntro .vi-name{font-size:clamp(34px,4.4vw,62px);letter-spacing:.06em;
+  background:linear-gradient(180deg,#fff6d6,#ffd76a 45%,#c8891d);-webkit-background-clip:text;background-clip:text;color:transparent}
+#vgIntro .vi-alias{font-size:clamp(18px,2vw,28px)}
+
+#vgIntro .vi-ctl{position:absolute;top:58px;right:16px;display:flex;gap:10px;z-index:2}
+#vgIntro .vi-ctl button{font:inherit;font-size:15px;font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;color:#fbe7b0;
+  background:rgba(10,6,0,.55);border:1px solid rgba(251,231,176,.5);backdrop-filter:blur(4px)}
+#vgIntro .vi-ctl button:hover{background:rgba(60,36,6,.8)}
+
+/* 按下進入：整片放大淡出 */
+#vgIntro.vi-out{animation:viLeave .9s cubic-bezier(.6,0,.3,1) both .2s;pointer-events:none}
+#vgIntro.vi-out .vi-go,#vgIntro.vi-out .vi-note,#vgIntro.vi-out .vi-ctl{opacity:0;transition:opacity .25s}
+
+@keyframes viBgIn{to{opacity:1}}
+@keyframes viKen{from{transform:scale(1)}to{transform:scale(1.05)}}
+@keyframes viSweepL{from{transform:rotate(-28deg)}to{transform:rotate(12deg)}}
+@keyframes viSweepR{from{transform:rotate(26deg)}to{transform:rotate(-14deg)}}
+@keyframes viFilm{to{transform:translateX(-120px)}}
+@keyframes viTwinkle{50%{opacity:.95}}
+@keyframes viRise{from{opacity:0;transform:translateY(30px) scale(.85);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+@keyframes viFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes viPulse{50%{box-shadow:0 0 0 14px rgba(255,200,90,0),0 14px 50px -6px rgba(255,120,40,.8),0 0 0 2px #fff3c9 inset}}
+@keyframes viLeave{to{opacity:0;transform:scale(1.2);filter:blur(6px)}}
+@media (prefers-reduced-motion:reduce){
+  #vgIntro *,#vgIntro{animation-duration:.01s !important;animation-delay:0s !important;animation-iteration-count:1 !important}
+}
+@media (min-width:601px){#vgIntro .vi-card{position:absolute;top:48.5%;left:0;right:0;margin:0 auto;padding-top:0}#vgIntro .vi-sub{margin-bottom:11vh}}
+@media (max-width:600px){
+  #vgIntro .vi-film{height:34px}
+  #vgIntro .vi-bg{top:34px;bottom:34px;background-position:42% top}
+  #vgIntro .vi-film i{background-size:100% 6px,100% 6px,100% 12px;background-position:0 4px,0 24px,0 11px}
+  #vgIntro .vi-sub{letter-spacing:.2em}
+  #vgIntro .vi-ctl{top:44px;right:10px}#vgIntro .vi-ctl button{font-size:14px;padding:7px 12px}
+  #vgIntro h1{font-size:clamp(30px,10.4vw,46px);letter-spacing:0}
+  #vgIntro .vi-card{margin-top:-6vh}
+  #vgIntro .vi-credit{left:10px;right:10px;justify-content:center;bottom:96px;gap:.25em}
+  #vgIntro .vi-name{font-size:36px}#vgIntro .vi-alias{font-size:17px}#vgIntro .vi-role{font-size:24px}
+  #vgIntro .vi-note{font-size:12.5px}
+  #vgIntro .vi-beam{width:34vmax}
+}
+
+/* 背景音樂開關（左下角常駐，蓋在開場層上面；右下角留給落款） */
+#vgBgm{position:fixed;left:16px;bottom:16px;z-index:10000;font:inherit;font-family:system-ui,"Segoe UI","Microsoft JhengHei",sans-serif;font-size:15px;font-weight:700;
+  padding:9px 16px;border-radius:999px;cursor:pointer;color:#3a1a00;background:linear-gradient(180deg,#fff2c4,#ffcf5a 45%,#d58f1e);border:0;box-shadow:0 8px 24px -8px rgba(0,0,0,.6)}
+#vgBgm[aria-pressed="false"]{background:#3a3f4a;color:#fff}
+#vgBgm:focus-visible{outline:3px solid #ffd34d;outline-offset:3px}
+html[data-intro="shown"] #vgBgm{bottom:58px}
+@media (max-width:600px){#vgBgm{left:10px;bottom:10px;font-size:14px;padding:8px 12px}html[data-intro="shown"] #vgBgm{bottom:44px}}

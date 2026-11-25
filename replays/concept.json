@@ -1,0 +1,126 @@
+{
+ "engine": "Antigravity",
+ "date": "2026-11-13",
+ "category": "concept",
+ "quick": {
+  "summary": "溫暖的海面讓水氣上升、地球自轉讓空氣旋轉、越轉越強形成颱風眼，最後提醒防颱準備。",
+  "keywords": "颱風、熱帶海洋、地球自轉",
+  "shots": 4
+ },
+ "tasks": {
+  "audience": {
+   "seconds": 36.0,
+   "patch": {
+    "target": "國中七至九年級學生，以及正在學習地球科學與天氣單元的一般師生。",
+    "message": "溫暖海水提供水氣能量，配合地球自轉的科氏力使氣流旋轉增強，最終形成結構完整的颱風。",
+    "action": "在颱風季來臨前，和家人一起檢查家中的防颱準備清單並確認避難物資。",
+    "keywords": "颱風、熱帶海洋、地球自轉",
+    "avoid": "避免出現真實災難死傷畫面、真實名人或新聞主播、特定品牌商標，以及過度複雜的大氣科學公式。"
+   }
+  },
+  "style": {
+   "seconds": 40.6,
+   "patch": {
+    "look": "3D 動畫（精緻科普立體模型結合動態氣流箭頭視覺化）",
+    "palette": "深海藍、青綠海洋色為主調，搭配亮白色厚實雲層、暖橘色（標示溫暖海水與上升水氣）及螢光青色（標示科氏力與旋轉氣流箭頭）。",
+    "mood": "清晰直觀、充滿科學探索感、節奏明快且具正向防災意識，不製造恐慌。",
+    "reference": "國家地理頻道與現代 3D 科學知識型 YouTube 短片風格：以立體剖面地球與海面模型呈現大氣對流與渦旋生成，搭配立體發光指示箭頭與簡潔資訊圖卡。",
+    "consistency": "全程維持一致的 3D 資訊圖表材質（微光半透明流線箭頭代表氣流、暖橘紅代表上升暖濕空氣、冰藍白代表高空旋轉雲系），海洋與地球球體比例、圓潤立體字卡樣式與柔和工作室光影在每一鏡皆保持統一。"
+   }
+  },
+  "shots": {
+   "seconds": 50.0,
+   "patch": {
+    "shots": [
+     {
+      "size": "全景",
+      "camera": "緩慢推近",
+      "visual": "精緻3D立體剖面海洋模型，陽光照射在深海藍與青綠色的溫暖熱帶海面上，水面浮現「26.5°C以上」圓潤立體字卡，無數暖橘色微光半透明流線箭頭從海面源源不絕向上升起並聚集成亮白雲朵。",
+      "character": "3D立體熱帶海洋與上升水氣箭頭模型",
+      "action": "海水表面受熱冒出暖橘色上升氣流箭頭，水氣向上凝結成亮白色積雲團。",
+      "sec": 5,
+      "transition": "匹配剪接",
+      "sfx": "柔和海浪聲搭配水氣蒸發上升的輕快合成音效"
+     },
+     {
+      "size": "遠景",
+      "camera": "環繞",
+      "visual": "鏡頭拉高至太空視角的3D立體地球模型，赤道北側的西北太平洋上方，螢光青色流線箭頭受地球自轉科氏力影響開始彎曲偏轉，圍繞著暖橘色上升氣流中心形成逆時針旋轉的立體雲系渦旋。",
+      "character": "3D地球模型與科氏力旋轉氣流箭頭",
+      "action": "地球球體緩緩自轉，帶動周圍螢光青色氣流箭頭向低壓中心偏轉並逆時針旋轉。",
+      "sec": 5,
+      "transition": "溶接",
+      "sfx": "低沉科技感旋轉風聲與清脆提示音"
+     },
+     {
+      "size": "特寫",
+      "camera": "空拍俯視",
+      "visual": "高空俯視轉為3D立體橫切剖面，冰藍白色的厚實螺旋雲帶越轉越密，暖橘色上升氣流在眼牆劇烈爬升，正中央清楚呈現無雲平靜的圓形「颱風眼」，旁邊浮現簡潔的「颱風眼、眼牆、螺旋雨帶」立體字卡。",
+      "character": "3D成熟颱風結構剖面模型",
+      "action": "螺旋雲帶快速向內捲入並加厚，正中央逐漸清空形成清晰的圓形颱風眼與眼牆結構。",
+      "sec": 5,
+      "transition": "直接切",
+      "sfx": "強勁但富節奏感的氣流呼嘯聲與雷達掃描音效"
+     },
+     {
+      "size": "中景",
+      "camera": "固定",
+      "visual": "畫面轉為明亮溫馨的3D居家立體模型，窗外玻璃貼著米字膠帶，桌上整齊擺放手電筒、瓶裝水、乾糧與急救包，旁邊浮現「水氣＋自轉＝颱風！快和家人檢查防颱清單」立體字卡與阿亮老師研習團隊字樣。",
+      "character": "3D科普國中生角色與防颱物資模型",
+      "action": "國中生角色微笑在防颱清單字卡上一一打勾，指向手電筒、飲用水與收音機模型。",
+      "sec": 5,
+      "transition": "淡入淡出",
+      "sfx": "溫暖輕快的木琴背景音樂搭配清脆的打勾叮咚聲"
+     }
+    ],
+    "title": "颱風是怎麼形成的？"
+   }
+  },
+  "characters": {
+   "seconds": 39.2,
+   "patch": {
+    "characters": [
+     {
+      "name": "小風（3D科普國中生角色）",
+      "look": "14歲臺灣國中男生，3D精緻科普動畫風格，清爽黑色短髮，圓潤親切的臉型，眼神明亮有精神，膚色健康自然。",
+      "outfit": "天藍色翻領短袖Polo衫（無任何品牌商標），搭配深藍色休閒短褲與白色室內拖鞋，造型整潔清爽。",
+      "personality": "好奇心強、冷靜細心、具科學探究精神與防災意識，微笑面對鏡頭時充滿朝氣與親和力。",
+      "anchor": "3D stylized animated character, 14-year-old Taiwanese junior high school student, boy, short neat black hair, round friendly face with bright dark eyes, wearing a sky-blue polo shirt with white collar and navy blue casual shorts, clean 3D educational animation style"
+     }
+    ]
+   }
+  },
+  "prompts": {
+   "seconds": 51.5,
+   "patch": {
+    "prompts": [
+     "Wide shot with a slow push-in camera movement. A refined 3D cross-section diorama of a warm tropical ocean with deep navy blue and teal water under bright golden sunlight. Countless glowing translucent warm orange streamline arrows continuously rise from the heated ocean surface into the air, condensing into fluffy bright white cumulus clouds above. Clean 3D scientific educational animation style with glowing volumetric airflow visualization, smooth studio lighting, and vibrant deep blue, teal, warm orange, and bright white palette, 16:9 aspect ratio, no text, no subtitles, no logo.",
+     "Extreme wide shot from space with a smooth orbiting camera movement. A 3D globe model focusing on the northwestern Pacific Ocean north of the equator. As the Earth gently rotates, glowing neon cyan streamline arrows representing airflow deflect and curve due to the Coriolis effect, swirling counterclockwise around a warm orange rising airflow center to form a rotating 3D cloud vortex. Clean 3D scientific educational animation style with glowing translucent streamline arrows, crisp studio lighting against dark space, vibrant ocean blue and neon cyan tones, 16:9 aspect ratio, no text, no subtitles, no logo.",
+     "Close-up overhead aerial top-down view transitioning into a 3D cross-section cut. Thick icy blue and bright white spiral rainbands spin rapidly inward, growing denser and taller. Glowing warm orange updraft arrows surge fiercely upward along the towering eyewall, while the exact center clears out to reveal a calm, cloudless circular typhoon eye over the deep blue sea. Clean 3D scientific educational animation style with semi-transparent volumetric clouds, dynamic glowing airflow arrows, and balanced studio lighting, 16:9 aspect ratio, no text, no subtitles, no logo.",
+     "Medium shot with a static camera in a bright, cozy 3D miniature living room diorama with taped window glass in the background. 3D stylized animated character, 14-year-old Taiwanese junior high school student, boy, short neat black hair, round friendly face with bright dark eyes, wearing a sky-blue polo shirt with white collar and navy blue casual shorts, clean 3D educational animation style. The boy smiles warmly and points toward neatly arranged typhoon preparedness supplies on a wooden table, including a flashlight, bottled water, dry food, a radio, and a first-aid kit. Warm soft indoor lighting, 16:9 aspect ratio, no text, no subtitles, no logo."
+    ]
+   }
+  },
+  "sound": {
+   "seconds": 53.1,
+   "patch": {
+    "narration": "當熱帶海水超過二十六點五度，溫暖水氣就會不斷上升成雲。接著地球自轉產生科氏力，帶動氣流逆時針旋轉聚集。水氣越轉越強，中間就會形成平靜無雲的颱風眼！颱風季快到了，快跟家人一起檢查防颱物資喔！",
+    "subtitles": "當熱帶海水超過26.5度\n溫暖水氣就會不斷上升成雲\n接著地球自轉產生科氏力\n帶動氣流逆時針旋轉聚集\n水氣越轉越強\n中間形成平靜無雲的颱風眼\n颱風季快到了\n快跟家人一起檢查防颱物資喔",
+    "voice": "臺灣口音年輕男聲（或陽光國中學長聲線），語氣清晰有朝氣、親切自然，具科普解說節奏感，語速適中（約每分鐘 240 字）。",
+    "music": "輕快具科學探索感的現代電子合成木琴配樂，前半段富節奏感與律動感，最後一鏡轉為溫暖明亮的木吉他與木琴和弦（約 110 BPM，音量壓在旁白下 -14dB）。",
+    "sfx": "第1鏡：柔和海浪聲與水氣上升輕快合成音｜第2鏡：低沉科技感旋轉風聲與清脆提示音｜第3鏡：強勁氣流呼嘯聲與雷達掃描音效｜第4鏡：清單打勾的清脆叮咚聲與溫馨收尾音。",
+    "subtitleStyle": "畫面底部置中，臺灣教育部標準圓體或黑體（白字配深海藍粗外框與微陰影），重點關鍵詞（26.5°C、科氏力、颱風眼、防颱物資）以暖橘色或螢光青色高亮標示，字級清晰易讀。"
+   }
+  },
+  "brand": {
+   "seconds": 33.9,
+   "patch": {
+    "org": "阿亮老師研習團隊",
+    "logoText": "讀懂颱風原理，做好防颱準備",
+    "slogan": "認識大氣科學，守護居家安全",
+    "cta": "立即和家人檢查防颱準備清單",
+    "url": ""
+   }
+  }
+ }
+}

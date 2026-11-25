@@ -1,0 +1,230 @@
+/* pop-halftone.css — 網點印刷 × 普普大字 × UI 比喻道具 風格包
+   pop-halftone-kit｜阿亮老師・3A科技研究社
+   字型：專案內需自備 @font-face（見 SKILL.md「字型」），變數名 --pp-font / --pp-mono。 */
+
+:root {
+  /* 油墨三原色 + 紙 + 墨 */
+  --pp-paper: #f3ead7;
+  --pp-ink: #1c1a1a;
+  --pp-red: #e23b2e;
+  --pp-yellow: #f2c230;
+  --pp-blue: #2c4fc4;
+  --pp-ok: #2fae5b;
+  --pp-mute: #b9b1a3;
+  --pp-card: #fbf6ea;
+  --pp-font: "PP Sans", sans-serif;
+  --pp-mono: "PP Mono", monospace;
+  /* 錯位印刷偏移量 */
+  --pp-misreg: 0.055em;
+  --pp-hard-shadow: 10px 10px 0 var(--pp-ink);
+}
+
+/* ---------- 大字 ---------- */
+.pp-title {
+  font-family: var(--pp-font);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--pp-ink);
+  /* 錯位印刷：紅版往右下、藍版往左上 */
+  text-shadow:
+    var(--pp-misreg) var(--pp-misreg) 0 var(--pp-red),
+    calc(var(--pp-misreg) * -0.4) calc(var(--pp-misreg) * -0.4) 0 color-mix(in srgb, var(--pp-blue) 55%, transparent);
+  margin: 0;
+}
+.pp-title.pp-on-dark { color: var(--pp-paper); }
+.pp-title .pp-hl { color: var(--pp-red); text-shadow: var(--pp-misreg) var(--pp-misreg) 0 var(--pp-ink); }
+.pp-title .pp-hl-b { color: var(--pp-blue); text-shadow: var(--pp-misreg) var(--pp-misreg) 0 var(--pp-yellow); }
+/* 黃色強調只用在暗底（亮底對比不足） */
+.pp-title .pp-hl-y { color: var(--pp-yellow); text-shadow: var(--pp-misreg) var(--pp-misreg) 0 var(--pp-ink); }
+/* 紙色描邊：大字壓在色團上時保證對比（opt-in） */
+.pp-title.pp-knock, .pp-knock .pp-title { -webkit-text-stroke: 0.09em var(--pp-paper); paint-order: stroke fill; }
+.pp-title.pp-knock.pp-on-dark, .pp-knock .pp-title.pp-on-dark { -webkit-text-stroke-color: var(--pp-ink); }
+.pp-ch { display: inline-block; will-change: transform; }
+
+/* 小標籤 / 膠囊 */
+.pp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--pp-mono);
+  font-weight: 700;
+  font-size: 26px;
+  padding: 8px 18px;
+  background: var(--pp-ink);
+  color: var(--pp-paper);
+  border-radius: 999px;
+}
+.pp-chip.pp-yellow { background: var(--pp-yellow); color: var(--pp-ink); box-shadow: 4px 4px 0 var(--pp-ink); }
+.pp-chip.pp-red { background: var(--pp-red); color: var(--pp-paper); box-shadow: 4px 4px 0 var(--pp-ink); }
+
+/* ---------- 卡片 / 視窗 ---------- */
+.pp-card {
+  background: var(--pp-card);
+  border: 6px solid var(--pp-ink);
+  border-radius: 22px;
+  box-shadow: var(--pp-hard-shadow);
+  color: var(--pp-ink);
+  font-family: var(--pp-font);
+}
+.pp-window { overflow: hidden; }
+.pp-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: var(--pp-yellow);
+  border-bottom: 6px solid var(--pp-ink);
+  font-family: var(--pp-mono);
+  font-weight: 700;
+  font-size: 22px;
+}
+.pp-window-bar i { width: 16px; height: 16px; border-radius: 50%; border: 3px solid var(--pp-ink); background: var(--pp-paper); display: block; }
+
+/* 按鈕 */
+.pp-btn {
+  display: inline-block;
+  font-family: var(--pp-font);
+  font-weight: 900;
+  font-size: 44px;
+  padding: 18px 44px;
+  background: var(--pp-red);
+  color: var(--pp-paper);
+  border: 6px solid var(--pp-ink);
+  border-radius: 18px;
+  box-shadow: 8px 8px 0 var(--pp-ink);
+}
+
+/* ---------- 老虎機滾輪 ---------- */
+.pp-roll { height: var(--pp-roll-h, 180px); overflow: hidden; position: relative; }
+.pp-roll-strip { display: flex; flex-direction: column; }
+.pp-roll-item {
+  height: var(--pp-roll-h, 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--pp-font);
+  font-weight: 900;
+  font-size: calc(var(--pp-roll-h, 180px) * 0.7);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------- 開關 ---------- */
+.pp-toggle { display: inline-flex; align-items: center; gap: 22px; font-family: var(--pp-font); font-weight: 900; font-size: 40px; color: var(--pp-ink); }
+.pp-toggle-track {
+  position: relative;
+  width: 220px;
+  height: 108px;
+  border-radius: 999px;
+  border: 6px solid var(--pp-ink);
+  background: var(--pp-mute);
+  box-shadow: 6px 6px 0 var(--pp-ink);
+}
+.pp-toggle-knob {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 6px solid var(--pp-ink);
+  background: var(--pp-paper);
+}
+.pp-toggle-label { font-family: var(--pp-mono); font-size: 34px; min-width: 3.2em; }
+
+/* ---------- 進度 / 電量條 ---------- */
+.pp-bar { display: grid; grid-template-columns: 200px 1fr 130px; align-items: center; gap: 22px; font-family: var(--pp-font); font-weight: 900; font-size: 46px; color: var(--pp-ink); }
+.pp-bar-track { height: 58px; border: 6px solid var(--pp-ink); border-radius: 14px; background: var(--pp-card); overflow: hidden; box-shadow: 6px 6px 0 var(--pp-ink); }
+.pp-bar-fill { height: 100%; width: 100%; transform-origin: left center; background: var(--pp-ok); }
+.pp-bar-num { font-family: var(--pp-mono); font-size: 40px; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- 儀表 ---------- */
+.pp-gauge { position: relative; width: 720px; height: 400px; }
+.pp-gauge-dial {
+  position: absolute;
+  inset: 0;
+  border: 8px solid var(--pp-ink);
+  border-bottom: none;
+  border-radius: 360px 360px 0 0;
+  background:
+    conic-gradient(from -90deg at 50% 100%, var(--pp-ok) 0deg 60deg, var(--pp-yellow) 60deg 120deg, var(--pp-red) 120deg 180deg, transparent 180deg);
+  box-shadow: var(--pp-hard-shadow);
+  overflow: hidden;
+}
+.pp-gauge-dial::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 0;
+  height: 64%;
+  border-radius: 300px 300px 0 0;
+  background: var(--pp-card);
+  border: 8px solid var(--pp-ink);
+  border-bottom: none;
+}
+.pp-gauge-needle {
+  position: absolute;
+  left: calc(50% - 9px);
+  bottom: 0;
+  width: 18px;
+  height: 330px;
+  background: var(--pp-ink);
+  border-radius: 9px;
+  transform-origin: 50% calc(100% - 9px);
+  z-index: 2;
+}
+.pp-gauge-hub { position: absolute; left: calc(50% - 34px); bottom: -34px; width: 68px; height: 68px; border-radius: 50%; background: var(--pp-ink); z-index: 3; }
+.pp-gauge-num {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  text-align: center;
+  font-family: var(--pp-mono);
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--pp-red);
+  z-index: 1;
+  font-variant-numeric: tabular-nums;
+}
+.pp-gauge-label { position: absolute; left: 0; right: 0; bottom: 150px; text-align: center; font-family: var(--pp-font); font-weight: 900; font-size: 34px; color: var(--pp-ink); z-index: 1; }
+
+/* ---------- 印章 ---------- */
+.pp-stamp {
+  display: inline-block;
+  font-family: var(--pp-font);
+  font-weight: 900;
+  font-size: 84px;
+  color: var(--pp-red);
+  border: 10px solid var(--pp-red);
+  border-radius: 18px;
+  padding: 8px 36px;
+  background: rgba(243, 234, 215, 0.25);
+  mix-blend-mode: multiply;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- 游標 ---------- */
+.pp-cursor { position: absolute; left: 0; top: 0; width: 64px; height: 64px; z-index: 50; pointer-events: none; transform-origin: 20% 10%; }
+
+/* ---------- 沒有 WebGL 時的純 CSS 網點底 ---------- */
+.pp-halftone-css {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(242, 194, 48, 0.85), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(226, 59, 46, 0.8), transparent 50%),
+    radial-gradient(circle at 70% 15%, rgba(44, 79, 196, 0.7), transparent 40%),
+    var(--pp-paper);
+}
+.pp-halftone-css::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(28, 26, 26, 0.35) 28%, transparent 30%);
+  background-size: 14px 14px;
+  -webkit-mask-image: linear-gradient(135deg, #000, transparent 70%);
+  mask-image: linear-gradient(135deg, #000, transparent 70%);
+}

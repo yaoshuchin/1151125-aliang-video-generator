@@ -1,0 +1,140 @@
+{
+ "engine": "Codex",
+ "date": "2026-11-13",
+ "category": "campus",
+ "quick": {
+  "summary": "清晨校門口的陽光、操場上的晨跑、教室裡專心的眼神、夕陽下的校門，帶出學校的願景。",
+  "keywords": "校園、溫暖、成長",
+  "shots": 4
+ },
+ "tasks": {
+  "audience": {
+   "seconds": 14.8,
+   "patch": {
+    "target": "即將入學的學生、家長與關心學校教育的社區民眾",
+    "message": "從清晨到夕陽，學校以溫暖陪伴每位學生在學習與生活中持續成長。",
+    "action": "看完影片後，進一步了解學校的課程特色與學習環境。",
+    "keywords": "校園、溫暖、成長",
+    "avoid": "避免出現真實名人、品牌商標、暴力血腥、危險模仿行為，以及過度強調競爭或升學排名的內容。"
+   }
+  },
+  "style": {
+   "seconds": 15.3,
+   "patch": {
+    "look": "日系清新、自然光寫實電影感，搭配柔和景深與乾淨構圖，呈現校園日常中的青春與成長",
+    "palette": "以晨光米白、天空淡藍、草地柔綠與夕陽暖橘為主，搭配低飽和木質棕與制服自然色，整體明亮柔和、不過度鮮豔",
+    "mood": "溫暖、安心、充滿朝氣與陪伴感，從清晨的期待逐步累積學習專注，最後收束於夕陽下對未來的希望",
+    "reference": "參考溫暖校園形象短片與日系青春成長紀錄風格，以清晨、課堂、操場和夕陽等生活化片段串連一天，使用自然環境聲與輕柔明亮的音樂，避免戲劇化表演與競爭排名意象",
+    "consistency": "全片維持16:9橫式構圖、自然光與低飽和清新色彩；學生服裝與校園場景保持連貫，人物以自然互動和專注神情為主；固定使用柔和推鏡、慢速平移與穩定中景，避免突然跳躍的色調、鏡頭速度或視覺特效"
+   }
+  },
+  "shots": {
+   "seconds": 20.2,
+   "patch": {
+    "title": "我們的學校一天",
+    "shots": [
+     {
+      "size": "大遠景",
+      "camera": "緩慢推近",
+      "visual": "清晨陽光灑在安靜的校門與樹影間，學生背著書包陸續走進校園，門旁花圃沾著露水，畫面明亮而充滿期待。",
+      "character": "學生、值勤教師",
+      "action": "學生微笑點頭問候，教師在校門口親切迎接，學生踏著晨光走入校園。",
+      "sec": 5,
+      "transition": "淡入淡出",
+      "sfx": "清晨鳥鳴、腳步聲、輕柔明亮音樂起"
+     },
+     {
+      "size": "全景",
+      "camera": "跟拍",
+      "visual": "操場草地映著柔和晨光，學生沿著跑道自然慢跑，遠處可見教學大樓與飄動的樹葉，校園充滿朝氣與律動。",
+      "character": "學生、體育教師",
+      "action": "學生依自己的步調慢跑，教師在旁鼓勵並提醒保持安全距離，隊伍穩定向前。",
+      "sec": 5,
+      "transition": "直接切",
+      "sfx": "輕快腳步聲、微風吹拂聲、音樂節奏漸明"
+     },
+     {
+      "size": "近景",
+      "camera": "左右搖",
+      "visual": "教室窗邊的自然光落在課本、筆記與專注的眼神上，學生舉手分享想法，同學互相聆聽，黑板上的圖示清楚可見。",
+      "character": "學生、教師",
+      "action": "教師引導討論，學生舉手發言並在筆記本記下重點，同學轉身交流學習發現。",
+      "sec": 5,
+      "transition": "匹配剪接",
+      "sfx": "翻頁聲、粉筆書寫聲、自然討論聲"
+     },
+     {
+      "size": "遠景",
+      "camera": "拉遠",
+      "visual": "夕陽把校門與校園樹木染成溫暖橘色，學生與家長在門口道別，教學大樓亮著柔和燈光，天空留下成長與希望的餘暉。",
+      "character": "學生、家長、教師",
+      "action": "學生回頭向校園揮手後與家長並肩離開，畫面浮現「從清晨到夕陽，陪伴每一步成長」與了解課程特色的提示。",
+      "sec": 5,
+      "transition": "淡入淡出",
+      "sfx": "晚風聲、遠處笑聲、溫暖音樂收束"
+     }
+    ]
+   }
+  },
+  "characters": {
+   "seconds": 19.7,
+   "patch": {
+    "characters": [
+     {
+      "name": "學生小安",
+      "look": "約13歲，中性外觀，黑色中長直髮，圓臉，眼神明亮自然，笑容親切。",
+      "outfit": "淺藍色校服上衣、深灰色長褲、白色運動鞋，背著深藍色書包。",
+      "personality": "開朗有禮、專注學習，喜歡和同學交流，面對校園生活充滿期待。",
+      "anchor": "13-year-old Taiwanese student, gender-neutral appearance, medium-length straight black hair, round face, bright natural eyes, friendly smile, light blue school uniform shirt, dark gray pants, white sneakers, navy blue backpack"
+     },
+     {
+      "name": "林老師",
+      "look": "約35歲女性，黑色及肩微捲髮，橢圓臉，神情溫和，姿態親切穩定。",
+      "outfit": "米白色襯衫、淺棕色針織外套、深藍色長褲、白色休閒鞋，配戴簡單手錶。",
+      "personality": "溫暖耐心、善於引導，重視學生安全與想法，總是以鼓勵的方式陪伴學生。",
+      "anchor": "35-year-old Taiwanese woman teacher, shoulder-length slightly wavy black hair, oval face, warm gentle expression, cream blouse, light brown knitted cardigan, dark navy pants, white casual shoes, simple wristwatch"
+     },
+     {
+      "name": "家長",
+      "look": "約40歲男性，短黑髮，方圓臉，神情溫柔安心，身形自然勻稱。",
+      "outfit": "淺灰色休閒外套、米白色上衣、深藍色長褲、棕色休閒鞋，服裝整潔簡約。",
+      "personality": "親切支持、重視陪伴，尊重孩子的學習步調，與學校保持良好互動。",
+      "anchor": "40-year-old Taiwanese man parent, short neat black hair, soft square-round face, calm warm expression, light gray casual jacket, ivory shirt, dark navy pants, brown casual shoes"
+     }
+    ]
+   }
+  },
+  "prompts": {
+   "seconds": 26.3,
+   "patch": {
+    "prompts": [
+     "Wide establishing shot, slow forward dolly toward a quiet school gate at sunrise. Students with backpacks enter through warm golden light while dew-covered flowerbeds glisten beneath gentle tree shadows. Students smile and nod politely as a welcoming teacher greets them at the entrance. Natural morning birdsong and soft footsteps are implied, with a hopeful atmosphere. Japanese fresh cinematic realism, natural light, soft depth of field, clean composition, muted cream, pale blue, soft green palette. 13-year-old Taiwanese student, gender-neutral appearance, medium-length straight black hair, round face, bright natural eyes, friendly smile, light blue school uniform shirt, dark gray pants, white sneakers, navy blue backpack. 35-year-old Taiwanese woman teacher, shoulder-length slightly wavy black hair, oval face, warm gentle expression, cream blouse, light brown knitted cardigan, dark navy pants, white casual shoes, simple wristwatch. no text, no subtitles, no logo.",
+     "Full shot, smooth tracking camera following students jogging naturally along the school track in soft morning sunlight. The students maintain comfortable personal space and move at different relaxed paces while a supportive physical education teacher walks nearby, encouraging safe distance and steady rhythm. Green grass, distant school buildings, and leaves moving in a light breeze create a lively but calm campus atmosphere. Japanese fresh cinematic realism, natural light, soft depth of field, stable movement, muted blue, green, and warm neutral palette. 13-year-old Taiwanese student, gender-neutral appearance, medium-length straight black hair, round face, bright natural eyes, friendly smile, light blue school uniform shirt, dark gray pants, white sneakers, navy blue backpack. no text, no subtitles, no logo.",
+     "Close-up with a gentle left-to-right pan across a classroom by the window. Natural daylight falls on an open textbook, handwritten notes, and a student's attentive eyes as the student raises a hand to share an idea. The teacher listens and guides the discussion while classmates turn toward one another and write key points. A clean blackboard with simple educational diagrams remains visible without readable lettering. Japanese fresh cinematic realism, soft natural light, shallow depth of field, quiet concentration, low-saturation wood and uniform colors. 13-year-old Taiwanese student, gender-neutral appearance, medium-length straight black hair, round face, bright natural eyes, friendly smile, light blue school uniform shirt, dark gray pants, white sneakers, navy blue backpack. 35-year-old Taiwanese woman teacher, shoulder-length slightly wavy black hair, oval face, warm gentle expression, cream blouse, light brown knitted cardigan, dark navy pants, white casual shoes, simple wristwatch. no text, no subtitles, no logo.",
+     "Distant wide shot, slow pullback from the school gate during golden sunset. The student turns back and waves warmly toward the campus, then walks beside the parent while the teacher offers a gentle farewell near the entrance. Trees and the school building glow in soft orange light, with a peaceful sky and a hopeful sense of growth. Japanese fresh cinematic realism, natural sunset illumination, soft depth of field, stable composition, muted warm orange, ivory, navy, and wood-brown palette. 13-year-old Taiwanese student, gender-neutral appearance, medium-length straight black hair, round face, bright natural eyes, friendly smile, light blue school uniform shirt, dark gray pants, white sneakers, navy blue backpack. 40-year-old Taiwanese man parent, short neat black hair, soft square-round face, calm warm expression, light gray casual jacket, ivory shirt, dark navy pants, brown casual shoes. 35-year-old Taiwanese woman teacher, shoulder-length slightly wavy black hair, oval face, warm gentle expression, cream blouse, light brown knitted cardigan, dark navy pants, white casual shoes, simple wristwatch. no text, no subtitles, no logo."
+    ]
+   }
+  },
+  "sound": {
+   "seconds": 18.1,
+   "patch": {
+    "narration": "清晨的陽光迎接每一位學生，晨跑喚起一天的活力。走進教室，我們專心學習、勇敢分享，在老師的陪伴中一步步成長。夕陽下，帶著新的收穫回家，明天也期待再次相見。",
+    "subtitles": "晨光迎接每位學生\n校園充滿一天活力\n晨跑喚起學習精神\n教室裡專心探索\n勇敢分享新的想法\n老師陪伴每一步成長\n夕陽帶回滿滿收穫\n明天期待再次相見",
+    "voice": "溫暖親切的臺灣女聲，語氣自然明亮、穩定清晰，帶有陪伴感與希望感，語速約每分鐘二百八十字。",
+    "music": "輕柔明亮的校園紀錄風配樂，以木吉他、鋼琴與柔和弦樂為主，從清晨淡淡開始，隨學習段落增加朝氣，最後在夕陽畫面溫暖收束。",
+    "sfx": "清晨鳥鳴、學生腳步聲、操場輕快跑步聲、微風吹拂樹葉聲、翻頁聲、粉筆書寫聲、自然討論聲、晚風聲與遠處笑聲。",
+    "subtitleStyle": "白色粗體繁體中文字，深藍半透明圓角底框，字體大而清楚，置於畫面下方安全區，搭配柔和淡入淡出，不遮擋人物表情與重要畫面。"
+   }
+  },
+  "brand": {
+   "seconds": 13.1,
+   "patch": {
+    "org": "阿亮老師研習團隊",
+    "logoText": "陪伴每一步成長",
+    "slogan": "從清晨到夕陽，安心成長",
+    "cta": "了解課程特色與學習環境",
+    "url": ""
+   }
+  }
+ }
+}

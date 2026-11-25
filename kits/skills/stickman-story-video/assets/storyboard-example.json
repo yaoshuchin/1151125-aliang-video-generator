@@ -1,0 +1,74 @@
+{
+  "title": "如何把大目標變得可實現",
+  "aspect": "16:9",
+  "fps": 30,
+  "voice": true,
+  "voice_provider": "edge",
+  "voice_name": "zh-TW-HsiaoYuNeural",
+  "voice_rate_percent": 20,
+  "voice_pitch_hz": 18,
+  "bgm": true,
+  "bgm_volume": 0.14,
+  "bgm_ducking": true,
+  "credits": {
+    "producer": "火柴人影片製作公司",
+    "author": "火柴人影片製作公司",
+    "closing_line": "陪你把想法變成看得見的作品。"
+  },
+  "scenes": [
+    {
+      "duration": 4,
+      "caption": "大目標看起來，就像一座很高的山。",
+      "narration": "當一個目標太大，我們往往還沒開始，就已經覺得累了。",
+      "action": "scared",
+      "prop": "mountain",
+      "emphasis": "先別怕",
+      "characters": [{"name": "小火", "color": "#25282d"}]
+    },
+    {
+      "duration": 4,
+      "caption": "先停下來想一想：哪一步最關鍵？",
+      "narration": "與其焦慮，不如先冷靜想清楚，哪一步能帶來最大的改變。",
+      "action": "think",
+      "prop": "idea bulb",
+      "emphasis": "找關鍵",
+      "characters": [{"name": "小火", "color": "#25282d"}]
+    },
+    {
+      "duration": 4,
+      "caption": "把大目標拆成，今天能完成的一小步。",
+      "narration": "不要一次推動整顆巨石，先找到今天能完成的最小一步。",
+      "action": "push",
+      "prop": "rock mountain",
+      "emphasis": "拆小一步",
+      "characters": [{"name": "小火", "color": "#25282d"}]
+    },
+    {
+      "duration": 4,
+      "caption": "踏出去，一步一步往前走。",
+      "narration": "行動起來，把計畫變成真正的腳步。",
+      "action": "walk",
+      "prop": "finish flag",
+      "emphasis": "開始行動",
+      "characters": [{"name": "小火", "color": "#25282d"}]
+    },
+    {
+      "duration": 4,
+      "caption": "每完成一步，就看一次結果。",
+      "narration": "完成小步驟之後，看看什麼有效，再決定下一步。",
+      "action": "point",
+      "prop": "chart",
+      "emphasis": "觀察結果",
+      "characters": [{"name": "小火", "color": "#25282d"}]
+    },
+    {
+      "duration": 4,
+      "caption": "抵達終點，為自己大聲歡呼！",
+      "narration": "當你持續小步前進、回顧與調整，原本遙遠的終點就會被你踩在腳下。",
+      "action": "celebrate",
+      "prop": "finish flag",
+      "emphasis": "你做到了",
+      "characters": [{"name": "小火", "color": "#25282d"}]
+    }
+  ]
+}

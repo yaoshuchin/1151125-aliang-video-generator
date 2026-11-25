@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light" data-font="medium">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎬 影片製作包生成器 · 視覺化旗艦版</title>
+<meta name="description" content="阿亮老師（曾慶良）我用 Skill 建置影片 · 視覺化多主題影片製作包生成器。">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="intro.css?v=20261114e">
+<link rel="stylesheet" href="site-foot.css">
+<link rel="stylesheet" href="custom.css">
+<script>
+/* 立即讀取記憶設定，防閃爍 */
+try {
+  var theme = localStorage.getItem('vg_theme_pref') || 'light';
+  var font = localStorage.getItem('vg_font_pref') || 'medium';
+  document.documentElement.dataset.theme = theme;
+  document.documentElement.dataset.font = font;
+} catch(e) {}
+</script>
+</head>
+<body data-theme="light">
+
+<!-- ==================== 1. 磨砂玻璃門禁認證 (Password Gate: nato) ==================== -->
+<div class="gate-overlay" id="gateModal">
+  <div class="gate-card">
+    <div class="gate-icon">🎬</div>
+    <h2 class="gate-title">影片製作包生成器 · 門禁認證</h2>
+    <p class="gate-desc">
+      本教學實戰系統受安全門禁保護。<br>
+      請輸入通關密碼（<b>nato</b>）解鎖進入全站功能。
+    </p>
+    <div class="gate-input-group">
+      <input type="password" class="gate-input" id="gatePassword" placeholder="請輸入通關密碼" autocomplete="current-password" autofocus>
+      <button type="button" class="gate-btn-submit" id="gateSubmit">✨ 驗證解鎖進入</button>
+    </div>
+    <div class="gate-error" id="gateError">密碼錯誤，請重新輸入</div>
+    <div class="gate-hint-box">
+      <span>💡</span> 提示：通關密碼為 <b>nato</b>（驗證採原生 Web Crypto SHA-256）
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 2. 現代化頂部整合導航列 ==================== -->
+<div class="header-wrapper">
+  <!-- 第一行：品牌識別與無障礙操作控制列 -->
+  <div class="top-bar-controls">
+    <a href="#" class="brand-group" onclick="window.Portal.switchTab('tab-generator'); return false;">
+      <div class="logo-icon">🎬</div>
+      <div class="brand-titles">
+        <span class="brand-main-title">影片製作包生成器</span>
+        <span class="brand-sub-title">我用 Skill 建置影片 · 阿亮老師 AI 實戰工作坊</span>
+      </div>
+    </a>
+
+    <!-- 字型、布景與門禁控制組 -->
+    <div class="controls-group">
+      <!-- 字型切換組 -->
+      <div class="control-item">
+        <span class="control-label">🔠 字型</span>
+        <button type="button" class="btn-pill btn-font-pill active" data-font="medium" title="標準字級 (16px)">中</button>
+        <button type="button" class="btn-pill btn-font-pill" data-font="large" title="大字級 (18.5px)">大</button>
+        <button type="button" class="btn-pill btn-font-pill" data-font="xlarge" title="特大字級 (21.5px)">特大</button>
+      </div>
+
+      <!-- 四色布景切換組 -->
+      <div class="control-item">
+        <span class="control-label">🎨 布景</span>
+        <button type="button" class="btn-pill btn-theme-pill active" data-theme="light" title="淺色明亮">淺 ☀️</button>
+        <button type="button" class="btn-pill btn-theme-pill" data-theme="dark" title="科技深色">深 🌙</button>
+        <button type="button" class="btn-pill btn-theme-pill" data-theme="green" title="翡翠綠">綠 🍃</button>
+        <button type="button" class="btn-pill btn-theme-pill" data-theme="blue" title="海洋藍">藍 🌊</button>
+      </div>
+
+      <!-- 門禁登出鎖定鈕 -->
+      <button type="button" class="btn-gate-toggle" id="btnGateLock" title="門禁鎖定設定">
+        🔒 已授權
+      </button>
+    </div>
+  </div>
+
+  <!-- 第二行：五大功能分頁標籤 (Tabs) -->
+  <nav class="tabs-nav-bar">
+    <button type="button" class="nav-tab-btn active" data-tab="tab-generator">
+      <span class="tab-icon">🚀</span>
+      <span>生成器主控台</span>
+    </button>
+    <button type="button" class="nav-tab-btn" data-tab="tab-gallery">
+      <span class="tab-icon">🎨</span>
+      <span>類別與風格圖鑑</span>
+    </button>
+    <button type="button" class="nav-tab-btn" data-tab="tab-replays">
+      <span class="tab-icon">📽️</span>
+      <span>經典分鏡範例庫</span>
+    </button>
+    <button type="button" class="nav-tab-btn" data-tab="tab-tools">
+      <span class="tab-icon">🛠️</span>
+      <span>工具與串接中心</span>
+    </button>
+    <button type="button" class="nav-tab-btn" data-tab="tab-sop">
+      <span class="tab-icon">📖</span>
+      <span>全流程操作手冊</span>
+    </button>
+  </nav>
+</div>
+
+<!-- ==================== 3. 主內容分頁容器 ==================== -->
+<div class="tab-content-container">
+
+  <!-- ==================== 分頁 1：生成器主控台 (Generator Console) ==================== -->
+  <div class="tab-pane active" id="tab-generator">
+<header class="top">
+
+  <a class="brand" id="brandHome" href="#" title="回到第一步（首頁）"><span class="logo"><svg viewBox="0 0 48 48" width="42" height="42" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4d8d"/><stop offset=".55" stop-color="#7c4dff"/><stop offset="1" stop-color="#19c3e6"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="url(#lg)"/><rect x="9" y="17" width="30" height="21" rx="4" fill="#fff"/><path d="M9 12.5l28-4.6 1 5.6-28 4.6z" fill="#1d1640"/><path d="M14 11.7l3.4 4.9M21 10.6l3.4 4.9M28 9.4l3.4 4.9" stroke="#fff" stroke-width="2.2"/><path d="M21 22.5v10.5l9-5.25z" fill="#7c4dff"/><path d="M38 4.5l1.4 3.1 3.1 1.4-3.1 1.4-1.4 3.1-1.4-3.1-3.1-1.4 3.1-1.4z" fill="#ffd34d"/></svg></span><div><b>影片製作包生成器</b><small>我用 Skill 建置影片</small></div></a>
+
+  <ol class="steps" id="steps">
+
+    <li data-step="1">① 選模式與引擎</li>
+
+    <li data-step="2">② 選類別</li>
+
+    <li data-step="3">③ 填寫內容</li>
+
+    <li data-step="4">④ 下載製作包</li>
+
+  </ol>
+
+  <div class="engine-pill" id="enginePill" title="AI 引擎狀態">檢查 AI 引擎…</div>
+
+</header>
+
+
+
+<main id="app">
+
+  <!-- 步驟 1：模式與引擎 -->
+
+  <section class="page" id="page1">
+
+    <div class="p1-head"><h1>先選你喜歡的做法</h1><button class="btn set-btn" id="btnSettings" title="底色風格、字體大小、AI 串接、清除內容">⚙ 設定</button></div>
+
+    <div class="grid2">
+
+      <button class="mode-card" data-mode="ai">
+
+        <span class="big">✨</span><b>AI 模式</b>
+
+        <p>只填故事摘要和關鍵字，按 ✨ 就幫你生成腳本、分鏡、人物、旁白、配樂。每一欄生成後都能自己改。</p>
+
+      </button>
+
+      <button class="mode-card" data-mode="manual">
+
+        <span class="big">✍️</span><b>手動模式</b>
+
+        <p>每一欄都自己填，畫面上沒有 AI 按鈕。想完全照自己的構想、或練習寫分鏡的人選這個。</p>
+
+      </button>
+
+    </div>
+
+    <a class='manju-card' href='/manju-cast/' id='manjuCard' rel='noopener' target='_blank'><span>📚</span><b>要做漫劇？先挑角色 →</b><small>紅果漫劇角色生成器：60 位原創角色、定妝照、三視圖，一鍵帶回生成器</small></a>
+
+    <div class="engine-box" id="engineBox">
+
+      <h2>AI 引擎（AI 模式用）</h2>
+
+      <p class="hint" id="engineHint">生成器會呼叫你電腦裡已登入的 AI 終端機。至少要有一個亮綠燈。</p>
+
+      <div class="engines" id="engines"></div>
+
+      <p class="hint" id="engineNote"></p>
+
+    </div>
+
+    <div class="nav"><span></span><button class="btn primary" id="to2">下一步：選類別 →</button></div>
+
+  </section>
+
+
+
+  <!-- 步驟 2：類別 -->
+
+  <section class="page" id="page2" hidden>
+
+    <h1>這支影片是哪一類？</h1>
+
+    <div class="cats" id="cats"></div>
+
+    <div id="shortStyles" hidden>
+
+      <h2>⚡ 短影音要哪一種風格？</h2>
+
+      <div class="styles" id="styles"></div>
+
+    </div>
+
+    <div class="nav"><button class="btn" id="back1">← 上一步</button><button class="btn primary" id="to3">下一步：填寫內容 →</button></div>
+
+  </section>
+
+
+
+  <!-- 步驟 3：填寫 -->
+
+  <section class="page" id="page3" hidden>
+
+    <div class="fill-head">
+
+      <div>
+
+        <h1 id="fillTitle">填寫內容</h1>
+
+        <p class="hint" id="fillHint"></p>
+
+      </div>
+
+      <div class="excel">
+
+        <span class="xl-step" id="xl1">① <button class="btn sm" id="btnTpl">⬇ 下載 Excel 範本</button></span>
+
+        <span class="xl-step">② 用 Excel 填寫、存檔</span>
+
+        <span class="xl-step" id="xl3">③ <label class="btn sm" for="xlInput" tabindex="0">⬆ 上傳填好的 Excel</label><input type="file" id="xlInput" accept=".xlsx,.xls,.csv" hidden></span>
+
+        <span class="mode-switch">模式：<button class="btn sm" id="modeToggle"></button></span>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="quick ai-only" id="quick">
+
+      <div class="q-title"><b>✨ 快速開始</b><span class="hint">填這三格，按「一鍵全部生成」，或往下每一區各自按 ✨。</span></div>
+
+      <div class="q-grid">
+
+        <label class="f wide">故事摘要／想表達的事<textarea id="q_summary" rows="3"></textarea></label>
+
+        <label class="f">關鍵字（用頓號隔開）<input id="q_keywords"></label>
+
+        <label class="f">要幾鏡？
+
+          <div class="seg" id="q_shots"><button data-v="4">4 鏡</button><button data-v="5">5 鏡</button><button data-v="6">6 鏡</button><button data-v="8">8 鏡</button><button data-v="10">10 鏡</button><button data-v="12">12 鏡</button></div>
+
+        </label>
+
+        <button class="btn ai big-ai" id="aiAll">✨ 一鍵全部生成</button>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="sections" id="sections"></div>
+
+    <div class="nav"><button class="btn" id="back2">← 上一步</button><button class="btn primary" id="to4">下一步：檢查並下載 →</button></div>
+
+  </section>
+
+
+
+  <!-- 步驟 4：下載 -->
+
+  <section class="page" id="page4" hidden>
+
+    <h1>檢查一下，下載製作包</h1>
+
+    <div class="grid2">
+
+      <div class="card">
+
+        <h2>檢查清單</h2>
+
+        <ul class="checks" id="checks"></ul>
+
+      </div>
+
+      <div class="card">
+
+        <h2>製作包裡有什麼</h2>
+
+        <ul class="pkg" id="pkgList"></ul>
+
+        <button class="btn primary big" id="btnDownload">⬇ 下載製作包（.zip）</button>
+
+        <p class="hint" id="dlHint"></p>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <h2>下載後，交給 AI 的一句話</h2>
+
+      <ol class="howto">
+
+        <li>把下載的 zip <b>解壓縮</b>成一個資料夾。</li>
+
+        <li>在那個資料夾打開 Claude Code、Codex 或 Antigravity（終端機打 <code>claude</code>、<code>codex</code> 或 <code>agy</code>）。</li>
+
+        <li>貼上這句話：</li>
+
+      </ol>
+
+      <div class="copybox"><pre id="oneLine"></pre><button class="btn sm" id="copyLine">複製</button></div>
+
+    </div>
+
+    <div class="nav"><button class="btn" id="back3">← 回去修改</button><span></span></div>
+
+  </section>
+
+</main>
+<div class="set-overlay" id="setOverlay" hidden>
+
+  <aside class="set-panel" id="setPanel" role="dialog" aria-modal="true" aria-labelledby="setTitle">
+
+    <header class="set-top"><h2 id="setTitle">⚙ 設定</h2><button class="btn sm" id="setClose" title="關閉設定">✕ 關閉</button></header>
+
+
+
+    <section class="set-group" id="setLook">
+
+      <h3>外觀</h3>
+
+      <div class="set-row"><span class="set-lab">底色風格</span>
+
+        <div class="seg set-seg" id="setTheme">
+
+          <button data-v="auto">跟隨系統</button><button data-v="light">淺色</button><button data-v="dark">深色</button><button data-v="sepia">護眼米色</button><button data-v="contrast">高對比</button>
+
+        </div>
+
+      </div>
+
+      <div class="set-row"><span class="set-lab">字體大小</span>
+
+        <div class="seg set-seg" id="setFont"><button data-v="normal">標準</button><button data-v="large">大</button></div>
+
+      </div>
+
+      <p class="hint">按下去馬上換，關掉瀏覽器再打開也會記得。</p>
+
+    </section>
+
+
+
+    <section class="set-group" id="setAI">
+
+      <h3>AI 串接</h3>
+
+      <div id="setAIBody"></div>
+
+    </section>
+
+
+
+    <section class="set-group" id="setOther">
+
+      <h3>其他</h3>
+
+      <div class="set-row"><span class="set-lab">清除內容</span>
+
+        <div><button class="btn danger" id="setClear">🗑 清除所有填寫內容</button>
+
+          <div class="set-confirm" id="setConfirm" hidden>
+
+            <p>確定要清除嗎？<b>每一個類別</b>填過的內容（快速開始、分鏡、角色、帳號金鑰）都會刪掉，回到預設範例；上面的設定會保留。</p>
+
+            <button class="btn danger" id="setClearYes">確定清除</button> <button class="btn" id="setClearNo">取消</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="set-row"><span class="set-lab">版本</span><span id="setVer"></span></div>
+
+      <div class="set-row"><span class="set-lab">說明</span><a href="https://ai-video-forge-aliang.netlify.app" target="_blank" rel="noopener">我用 Skill 建置影片 課程網站（U03 有生成器教學）↗</a></div>
+
+    </section>
+
+    <div class="set-foot"><button class="btn primary" id="setDone">完成</button></div>
+
+  </aside>
+
+</div>
+
+
+
+<div class="toast" id="toast" hidden></div>
+
+<div class="busy" id="busy" hidden><div class="spin"></div><p id="busyText">AI 生成中…</p><small id="busySub"></small></div>
+
+
+
+
+  </div>
+
+  <!-- ==================== 分頁 2：類別與風格視覺圖鑑 (Style Gallery) ==================== -->
+  <div class="tab-pane" id="tab-gallery">
+    <div class="gallery-hero">
+      <h2>🎨 影片類別與風格視覺圖鑑</h2>
+      <p>探索阿亮老師精心調校的影音風格體系，從免扣點數的短影音快剪到 Google Flow 旗艦大片，點擊一鍵即可套用製作！</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- 由 portal.js 動態渲染 -->
+    </div>
+  </div>
+
+  <!-- ==================== 分頁 3：經典分鏡範例庫 (Replays Showcase) ==================== -->
+  <div class="tab-pane" id="tab-replays">
+    <div class="gallery-hero">
+      <h2>📽️ 經典實戰分鏡範例庫</h2>
+      <p>精選四大實戰影片的完整分鏡表、畫面描述、運鏡角度與音效規劃，支援一鍵將整套分鏡載入生成器！</p>
+    </div>
+    
+    <div class="showcase-selector">
+      <button type="button" class="showcase-cat-btn active" data-cat="short">⚡ 短影音（期末成果展快訊）</button>
+      <button type="button" class="showcase-cat-btn" data-cat="promo">🎓 課程宣傳（AI工作坊招生）</button>
+      <button type="button" class="showcase-cat-btn" data-cat="campus">🏫 校園形象（我們的學校一天）</button>
+      <button type="button" class="showcase-cat-btn" data-cat="concept">💡 知識概念（颱風形成原理）</button>
+    </div>
+
+    <div id="showcaseContent">
+      <!-- 由 portal.js 動態渲染 -->
+    </div>
+  </div>
+
+  <!-- ==================== 分頁 4：工具與串接中心 (Tools & Bridge Hub) ==================== -->
+  <div class="tab-pane" id="tab-tools">
+    <div class="gallery-hero">
+      <h2>🛠️ 工具資源與本機 AI 串接中心</h2>
+      <p>提供搭起線上網頁與電腦本機 AI 終端機的小橋工具、Chrome 擴充套件與核心環境檢驗清單。</p>
+    </div>
+
+    <div class="tools-grid">
+      <!-- 工具卡片 1 -->
+      <div class="tool-card">
+        <div class="tool-card-icon">🌉</div>
+        <h3>本機 AI 串接包</h3>
+        <p>讓線上的影片生成器網頁叫得動你電腦裡的 Claude Code、Codex 或 Antigravity。只綁 127.0.0.1，不傳輸個人檔案。</p>
+        <div class="code-snippet-box">
+          <code>雙擊「開啟AI串接器.cmd」</code>
+          <button class="btn-copy-code" onclick="window.Portal.copyText('python AI串接器.py', this)">複製啟動指令</button>
+        </div>
+        <a href="download/AI串接包.zip" class="gallery-btn-apply" download>⬇ 下載本機 AI 串接包 (.zip)</a>
+      </div>
+
+      <!-- 工具卡片 2 -->
+      <div class="tool-card">
+        <div class="tool-card-icon">🧩</div>
+        <h3>Google Flow 小幫手擴充</h3>
+        <p>載入 Chrome 瀏覽器，協助自動在 Google Flow 出片、提示詞對位核准與影片成品批次自動下載。</p>
+        <div class="code-snippet-box">
+          <code>Chrome 擴充功能 ➔ 載入未封裝項目</code>
+          <button class="btn-copy-code" onclick="window.Portal.copyText('chrome://extensions', this)">複製網址</button>
+        </div>
+        <a href="download/Flow小幫手擴充.zip" class="gallery-btn-apply" download>⬇ 下載 Flow 小幫手擴充 (.zip)</a>
+      </div>
+
+      <!-- 工具卡片 3 -->
+      <div class="tool-card">
+        <div class="tool-card-icon">🎛️</div>
+        <h3>影音生成遙控器</h3>
+        <p>九大素材分類鍵位（人物、場景、字卡、分鏡、旁白、配樂、音效、片段、成片），一鍵自動由 ffmpeg 合成最終成片。</p>
+        <div class="code-snippet-box">
+          <code>1~9 鍵全自動素材分類與合成</code>
+          <button class="btn-copy-code" onclick="window.Portal.copyText('python 遙控器.py', this)">複製指令</button>
+        </div>
+        <button class="gallery-btn-apply" onclick="window.Portal.switchTab('tab-sop')">📖 查閱遙控器操作 SOP</button>
+      </div>
+    </div>
+
+    <!-- 即時連線檢測面板 -->
+    <div class="showcase-detail-box" style="margin-top: 1.5rem;">
+      <div class="showcase-header">
+        <div>
+          <h3 style="margin:0 0 0.4rem 0;">📡 本機 AI 串接器（Port 8899）即時連線檢測</h3>
+          <p style="color:var(--text-muted); margin:0;">若您已在本機終端機或視窗中啟動 AI串接器.py，可在此一鍵驗證連線狀況。</p>
+        </div>
+        <button class="gallery-btn-apply" style="width:auto; padding:0.6rem 1.4rem;" id="btnTestBridge">🔄 立即檢測連線</button>
+      </div>
+      <div id="bridgeTestResult" style="font-weight:700; font-size:1.05rem; padding: 0.5rem 0;">
+        點擊上方「立即檢測連線」以測試 127.0.0.1:8899 通訊狀態。
+      </div>
+    </div>
+
+    <!-- 環境檢測指令清單 -->
+    <div class="showcase-detail-box" style="margin-top: 1.5rem;">
+      <h3 style="margin-top:0;">📋 本機出片環境必備檢查指令</h3>
+      <table style="width:100%; border-collapse:collapse; margin-top:1rem; font-size:0.92rem;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border-color); text-align:left;">
+            <th style="padding:0.6rem;">元件</th>
+            <th style="padding:0.6rem;">檢測指令</th>
+            <th style="padding:0.6rem;">功能說明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border-color);">
+            <td style="padding:0.6rem; font-weight:700;">Python</td>
+            <td style="padding:0.6rem;"><code>python --version</code></td>
+            <td style="padding:0.6rem; color:var(--text-muted);">AI 串接器、音畫後製腳本與合成核心</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-color);">
+            <td style="padding:0.6rem; font-weight:700;">Node.js</td>
+            <td style="padding:0.6rem;"><code>node -v</code></td>
+            <td style="padding:0.6rem; color:var(--text-muted);">Hyperframes 字卡動畫與 GSAP 算圖</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-color);">
+            <td style="padding:0.6rem; font-weight:700;">FFmpeg</td>
+            <td style="padding:0.6rem;"><code>ffmpeg -version</code></td>
+            <td style="padding:0.6rem; color:var(--text-muted);">視訊剪輯、音訊對位、字幕壓制與封裝</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-color);">
+            <td style="padding:0.6rem; font-weight:700;">Edge-TTS</td>
+            <td style="padding:0.6rem;"><code>pip show edge-tts</code></td>
+            <td style="padding:0.6rem; color:var(--text-muted);">微軟自然真人語音旁白合成引擎</td>
+          </tr>
+          <tr>
+            <td style="padding:0.6rem; font-weight:700;">Antigravity / Codex</td>
+            <td style="padding:0.6rem;"><code>agy --version / codex --version</code></td>
+            <td style="padding:0.6rem; color:var(--text-muted);">自主式 AI Agent 助手，負責出片執行</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ==================== 分頁 5：全流程操作手冊 (Workflow SOP) ==================== -->
+  <div class="tab-pane" id="tab-sop">
+    <div class="gallery-hero">
+      <h2>📖 阿亮老師「我用 Skill 建置影片」全流程實戰指南</h2>
+      <p>從一句話想法出發，經過生成器規格拆解、AI 助教分鏡落地，到遙控器一鍵成片的三層架構 SOP。</p>
+    </div>
+
+    <!-- 三層架構說明 -->
+    <div class="sop-section">
+      <h3>🏛️ 影音創作三層架構 (Three-Tier Architecture)</h3>
+      <div class="sop-steps-flow">
+        <div class="sop-step-box">
+          <span class="sop-step-num">01</span>
+          <h4>第一篇：影片製作包生成器</h4>
+          <p>線上選擇風格（短影音/課程宣傳/校園形象/知識概念），AI 自動寫腳本、分鏡、一致性人物、旁白，下載製作包 (.zip)。</p>
+        </div>
+        <div class="sop-step-box">
+          <span class="sop-step-num">02</span>
+          <h4>第二篇：AI 助教協作執行</h4>
+          <p>解壓製作包，打開 Antigravity / Codex / Claude，貼上一句話叫 AI 讀 SKILL.md，一鏡一鏡完成畫面生成與音畫對位。</p>
+        </div>
+        <div class="sop-step-box">
+          <span class="sop-step-num">03</span>
+          <h4>第三篇：影音生成遙控器</h4>
+          <p>1～9 鍵分類歸檔（人物、場景、字卡、分鏡、旁白、配樂、音效、片段、成片），最後按下 9 鍵由 ffmpeg 自動合成成片。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 給 AI 的一句話 -->
+    <div class="sop-section">
+      <h3>💬 下載製作包後，給 AI 的神級指令</h3>
+      <p style="color:var(--text-muted);">把下載的製作包解壓縮為資料夾後，在該目錄終端機啟動 AI（<code>agy</code> 或 <code>codex</code>），複製貼上下方一句話：</p>
+      <div class="code-snippet-box" style="padding: 1.2rem; font-size: 0.95rem; line-height: 1.6;">
+        <span>請先讀這個資料夾的「先讀我.md」和 SKILL.md，完全照裡面的步驟，幫我把這支影片做出來。每完成一鏡就用白話跟我回報。</span>
+        <button class="btn-copy-code" onclick="window.Portal.copyText('請先讀這個資料夾的「先讀我.md」和 SKILL.md，完全照裡面的步驟，幫我把這支影片做出來。每完成一鏡就用白話跟我回報。', this)">複製給 AI 的指令</button>
+      </div>
+    </div>
+
+    <!-- 驗收清單 -->
+    <div class="sop-section">
+      <h3>✅ 成片驗收自我檢核清單</h3>
+      <ul class="gallery-features" style="font-size:0.95rem; gap:0.8rem;">
+        <li><b>秒數精準度：</b>整支影片時長是否符合預期（如短影音 20 秒、宣傳片 24 秒），鏡頭銜接是否流暢不卡頓。</li>
+        <li><b>音畫對位：</b>旁白聲音與畫面動作是否精確對齊，關鍵字卡出現時是否有微重音或叮咚音效。</li>
+        <li><b>字幕與字卡：</b>字幕是否無錯別字、文字高對比無遮擋（如白字黑邊）、位於安全閱讀區域。</li>
+        <li><b>人物一致性：</b>若有多鏡頭人物，髮型、服裝、面貌是否維持高度一致，避免敏感年齡或特徵詞彙。</li>
+        <li><b>背景音樂 (BGM)：</b>配樂音量是否適度（旁白說話時配樂自動側鏈避讓 ducking，結尾自然淡出）。</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- 原始頁尾 -->
+<footer class="sf" id="siteFoot">
+
+  <div class="sf-in">
+
+    <section>
+
+      <h4>👨‍🏫 作者：曾慶良 主任（阿亮老師）</h4>
+
+      <p>新興科技推廣中心主任<br>教育部學科中心研究教師<br>臺北市資訊教育輔導員</p>
+
+      <p>📺 YouTube：<a href="https://www.youtube.com/@Liang-yt02" target="_blank" rel="noopener">@Liang-yt02</a><br>👥 Facebook 社團：<a href="https://www.facebook.com/groups/2754139931432955" target="_blank" rel="noopener">3A 科技研究社</a><br>✉️ Email：<a href="mailto:3a01chatgpt@gmail.com">3a01chatgpt@gmail.com</a></p>
+
+    </section>
+
+    <section>
+
+      <h4>🏆 獲獎紀錄</h4>
+
+      <ul>
+
+        <li>2026 年 國科會資安創意發想競賽優勝，蒙總統府接見</li>
+
+        <li>2025 年 SETEAM 教學專業講師認證</li>
+
+        <li>2024 年 教育部人工智慧講師認證</li>
+
+        <li>2022、2023 年 指導學生 XR 專題競賽特優</li>
+
+        <li>2022 年 VR 教材開發教師組特優</li>
+
+        <li>2019 年 百大資訊人才獎</li>
+
+        <li>2018、2019 年 親子天下創新 100 教師</li>
+
+        <li>2018 年 臺北市特殊優良教師</li>
+
+        <li>2017 年 教育部行動學習優等</li>
+
+      </ul>
+
+    </section>
+
+    <section>
+
+      <h4>📜 著作權與授權聲明</h4>
+
+      <p>本網站的程式、介面、文字、提示詞、範例與圖片，著作權屬阿亮老師（曾慶良）所有，受中華民國《著作權法》保護。</p>
+
+      <p>本工具僅供「阿亮老師課程學員」學習使用。</p>
+
+      <p class="sf-warn">❌ 禁止修改　❌ 禁止轉傳或散布　❌ 禁止商業使用<br>❌ 禁止複製、重製、反向工程或架設相同服務<br>❌ 禁止未經授權的任何形式使用</p>
+
+      <p>違反者將依《著作權法》追究民事與刑事責任。如有授權需求，請來信聯繫作者。</p>
+
+    </section>
+
+    <section>
+
+      <h4>⚖️ 使用規範與個人資料</h4>
+
+      <ul>
+
+        <li><b>個人資料：</b>你填寫的內容、帳號與金鑰只存在你自己的瀏覽器，本網站不蒐集、不儲存、不轉售。按 ✨ 生成時，只把這次要生成的影片資料送去組提示詞，用完即丟、不留存。</li>
+
+        <li><b>AI 串接器：</b>在你自己的電腦執行，只綁 127.0.0.1，不讀寫你的檔案。</li>
+
+        <li><b>AI 生成內容：</b>由你自己的 AI 帳號產生，請自行確認內容正確。依《個人資料保護法》與《著作權法》，請勿放入他人個資、真實人物肖像、他人商標或未授權素材；公開影片請標示「AI 生成」。</li>
+
+        <li>不得用於違法、詐騙、色情、誹謗、冒充他人或侵害他人權利的內容。</li>
+
+      </ul>
+
+    </section>
+
+  </div>
+
+  <p class="sf-copy">© 2026 阿亮老師（曾慶良）版權所有 · All rights reserved. · Made with ❤️ by 阿亮老師</p>
+
+</footer>
+
+<!-- 載入腳本 -->
+<script src="gate.js"></script>
+<script src="lib/jszip.min.js"></script>
+<script src="data.js"></script>
+<script src="gallery_data.js"></script>
+<script src="replays_data.js"></script>
+<script src="portal.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

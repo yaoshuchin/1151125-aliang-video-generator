@@ -1,0 +1,10 @@
+/* 頁尾：作者、著作權、法規、個人資料（2026-11-13） */
+.sf{margin:32px 0 0;padding:28px 20px 36px;border-top:1px solid var(--line);background:var(--panel2);color:var(--mute);font-size:14.5px;line-height:1.75}
+.sf-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 32px}
+.sf h4{margin:0 0 6px;color:var(--text);font-size:15.5px}
+.sf p,.sf ul{margin:0 0 6px}
+.sf ul{padding-left:1.2em}
+.sf a{color:inherit;text-decoration:underline;word-break:break-all}
+.sf b{color:var(--text)}
+.sf-copy{max-width:1180px;margin:20px auto 0;padding-top:14px;border-top:1px dashed var(--line);text-align:center;font-size:14px}
+.sf-warn{color:var(--text);font-weight:600}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Flow 小幫手",
+  "version": "1.0.0",
+  "description": "讓你電腦裡的 AI（Claude Code／Codex／Antigravity）在你平常的 Chrome 操作 Google Flow（出片時才連線，平常黃燈是正常的）。只連本機 127.0.0.1，不連其他伺服器。",
+  "permissions": ["debugger", "tabs", "downloads", "alarms", "storage"],
+  "host_permissions": [
+    "https://flow.google.com/*",
+    "https://labs.google/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Flow 小幫手", "default_popup": "popup.html" },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+}

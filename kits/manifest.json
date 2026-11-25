@@ -1,0 +1,1031 @@
+{
+ "common": [
+  "common/AGENTS.md",
+  "common/CLAUDE.md",
+  "common/GEMINI.md",
+  "common/SKILL.md",
+  "common/tools/check_env.py",
+  "common/tools/make_final.py",
+  "common/先讀我.md",
+  "common/帶做提示詞.txt"
+ ],
+ "flow": [
+  "flow/tools/Flow小幫手擴充/background.js",
+  "flow/tools/Flow小幫手擴充/icon128.png",
+  "flow/tools/Flow小幫手擴充/icon16.png",
+  "flow/tools/Flow小幫手擴充/icon48.png",
+  "flow/tools/Flow小幫手擴充/manifest.json",
+  "flow/tools/Flow小幫手擴充/popup.html",
+  "flow/tools/Flow小幫手擴充/popup.js",
+  "flow/tools/char_sheet.py",
+  "flow/tools/cli-anything-flow/cli_anything_flow.py",
+  "flow/tools/cli-anything-flow/flow_bridge.py",
+  "flow/tools/cli-anything-flow/flowctl.py",
+  "flow/tools/cli-anything-flow/ui_dump.js",
+  "flow/tools/face_check.py",
+  "flow/tools/fal_api.py",
+  "flow/tools/flow_ready.py",
+  "flow/tools/flow_run.py",
+  "flow/tools/gemini-omni-flash-api/LICENSE_Apache-2.0.txt",
+  "flow/tools/gemini-omni-flash-api/SKILL.md",
+  "flow/tools/gemini-omni-flash-api/scripts/upload_file.py",
+  "flow/tools/gemini-omni-flash-api/scripts/video/generate_video.py",
+  "flow/tools/gemini-omni-flash-api/scripts/video/inspect_video.py",
+  "flow/tools/gemini-omni-flash-api/scripts/video/prep_video.py",
+  "flow/tools/gemini-omni-flash-api/來源.txt",
+  "flow/tools/omni_api.py"
+ ],
+ "guides": {
+  "style:kinetic": [
+   "style_kinetic/skills/風格說明.md"
+  ],
+  "style:explainer": [
+   "style_explainer/skills/風格說明.md"
+  ],
+  "style:lecture": [
+   "style_lecture/skills/風格說明.md"
+  ],
+  "style:logo": [
+   "style_logo/skills/風格說明.md"
+  ],
+  "style:stock": [
+   "style_stock/skills/風格說明.md"
+  ],
+  "style:handdrawn": [
+   "style_handdrawn/skills/風格說明.md"
+  ],
+  "cat:promo": [
+   "cat_promo/skills/技能說明.md"
+  ],
+  "cat:campus": [
+   "cat_campus/skills/技能說明.md"
+  ],
+  "cat:manju": [],
+  "cat:concept": [
+   "cat_concept/skills/技能說明.md"
+  ]
+ },
+ "kits": {
+  "style:kinetic": [
+   {
+    "name": "liang-cut-broll",
+    "when": "先挑字卡風格"
+   },
+   {
+    "name": "hyperframes-registry",
+    "when": "要轉場、數字、圖表時"
+   },
+   {
+    "name": "pop-halftone-kit",
+    "when": "要普普網點風時"
+   },
+   {
+    "name": "gsap",
+    "when": "寫動畫時"
+   },
+   {
+    "name": "motion-design",
+    "when": "調節奏時"
+   }
+  ],
+  "style:explainer": [
+   {
+    "name": "faceless-explainer",
+    "when": "主流程：圖示＋圖表解說"
+   },
+   {
+    "name": "handwrite-ad",
+    "when": "要手寫白板風時"
+   },
+   {
+    "name": "hyperframes-registry",
+    "when": "要圖表、箭頭時"
+   },
+   {
+    "name": "guizang-material-illustration",
+    "when": "要圖解插圖時"
+   },
+   {
+    "name": "gsap",
+    "when": "寫動畫時"
+   },
+   {
+    "name": "motion-design",
+    "when": "調節奏時"
+   }
+  ],
+  "style:lecture": [
+   {
+    "name": "ai-teaching-video",
+    "when": "主流程（快速模式）"
+   },
+   {
+    "name": "slideshow",
+    "when": "想讓投影片會動時"
+   },
+   {
+    "name": "caption-doctor",
+    "when": "字幕出來後清理"
+   },
+   {
+    "name": "short-video-editor",
+    "when": "有自己錄的講話影片時"
+   }
+  ],
+  "style:logo": [
+   {
+    "name": "pixel2motion",
+    "when": "主流程：Logo 變動畫"
+   },
+   {
+    "name": "motion-graphics",
+    "when": "要加字、配樂做片頭時"
+   },
+   {
+    "name": "motion-design",
+    "when": "調動作時"
+   }
+  ],
+  "style:stock": [
+   {
+    "name": "liang-stock-footage",
+    "when": "找素材、下載"
+   },
+   {
+    "name": "liang-emotional-short",
+    "when": "挑片、金句字卡、出片"
+   },
+   {
+    "name": "liang-cut-broll",
+    "when": "片頭與段落字卡"
+   },
+   {
+    "name": "short-video-editor",
+    "when": "有自己錄的口播時"
+   }
+  ],
+  "style:handdrawn": [
+   {
+    "name": "story-to-handdrawn-video",
+    "when": "主流程"
+   },
+   {
+    "name": "imagegen",
+    "when": "畫每一頁插圖時"
+   }
+  ],
+  "cat:promo": [
+   {
+    "name": "promo-ad-forge",
+    "when": "片段到齊後做片頭、資訊字卡、報名結尾"
+   },
+   {
+    "name": "content-to-motion-video",
+    "when": "想換動畫風格或疊標註時"
+   },
+   {
+    "name": "emotion-director",
+    "when": "出片前修飾每鏡提示詞"
+   },
+   {
+    "name": "pixel2motion",
+    "when": "有 Logo 時做結尾動畫"
+   },
+   {
+    "name": "liang-cut-broll",
+    "when": "日期、地點、名額字卡"
+   },
+   {
+    "name": "website-to-video",
+    "when": "選配：有課程網站時"
+   },
+   {
+    "name": "short-video-editor",
+    "when": "選配：有老師或學生錄的口播時"
+   }
+  ],
+  "cat:campus": [
+   {
+    "name": "emotion-director",
+    "when": "出片前修飾每鏡提示詞"
+   },
+   {
+    "name": "pixel2motion",
+    "when": "有校徽時做片尾動畫"
+   },
+   {
+    "name": "consistency-checker",
+    "when": "片段到齊後檢查角色一致"
+   },
+   {
+    "name": "liang-cut-broll",
+    "when": "校名、標語字卡"
+   },
+   {
+    "name": "embedded-captions",
+    "when": "想要更好看的字幕時"
+   },
+   {
+    "name": "flow-bgm-cc",
+    "when": "沒有自己的 mp3 時的配樂"
+   },
+   {
+    "name": "liang-emotional-short",
+    "when": "備援：Flow 點數用完且使用者同意"
+   },
+   {
+    "name": "liang-stock-footage",
+    "when": "備援：搭配上一支找免費實景"
+   },
+   {
+    "name": "short-video-editor",
+    "when": "選配：有師生錄的口播時"
+   }
+  ],
+  "cat:manju": [
+   {
+    "name": "emotion-director",
+    "when": "出片前修飾每鏡提示詞（情緒、表演）"
+   },
+   {
+    "name": "consistency-checker",
+    "when": "片段到齊後檢查角色一致"
+   },
+   {
+    "name": "embedded-captions",
+    "when": "直式短劇字幕"
+   },
+   {
+    "name": "liang-cut-broll",
+    "when": "劇名、斷章字卡"
+   },
+   {
+    "name": "flow-bgm-cc",
+    "when": "沒有自己的 mp3 時的配樂"
+   }
+  ],
+  "cat:concept": [
+   {
+    "name": "content-to-motion-video",
+    "when": "片頭題目卡、名詞字卡、重點整理"
+   },
+   {
+    "name": "stickman-story-video",
+    "when": "步驟示意、因果關係"
+   },
+   {
+    "name": "guizang-material-illustration",
+    "when": "片尾圖解整理"
+   },
+   {
+    "name": "manim-composer",
+    "when": "數學、物理概念才用"
+   },
+   {
+    "name": "consistency-checker",
+    "when": "片段到齊後檢查一致"
+   },
+   {
+    "name": "flow-bgm-cc",
+    "when": "沒有自己的 mp3 時的配樂"
+   }
+  ]
+ },
+ "skills": {
+  "ai-teaching-video": [
+   "skills/ai-teaching-video/SKILL.md",
+   "skills/ai-teaching-video/scripts/add_bgm.py",
+   "skills/ai-teaching-video/scripts/assemble_video.py",
+   "skills/ai-teaching-video/scripts/env_check.py",
+   "skills/ai-teaching-video/scripts/full_pipeline.py",
+   "skills/ai-teaching-video/scripts/generate_slides.py",
+   "skills/ai-teaching-video/scripts/generate_subtitles.py",
+   "skills/ai-teaching-video/scripts/generate_tts.py",
+   "skills/ai-teaching-video/scripts/render_remotion.py",
+   "skills/ai-teaching-video/scripts/setup_remotion.py"
+  ],
+  "caption-doctor": [
+   "skills/caption-doctor/SKILL.md",
+   "skills/caption-doctor/assets/captiondoctor.py",
+   "skills/caption-doctor/examples/example_clean.srt",
+   "skills/caption-doctor/examples/example_raw.srt"
+  ],
+  "consistency-checker": [
+   "skills/consistency-checker/SKILL.md",
+   "skills/consistency-checker/references/consistency-rules.md",
+   "skills/consistency-checker/scripts/check_consistency.py",
+   "skills/consistency-checker/scripts/env_check.py",
+   "skills/consistency-checker/scripts/from_video_request.py"
+  ],
+  "content-to-motion-video": [
+   "skills/content-to-motion-video/SKILL.md"
+  ],
+  "embedded-captions": [
+   "skills/embedded-captions/CATALOG.md",
+   "skills/embedded-captions/LICENSE_Apache-2.0.txt",
+   "skills/embedded-captions/SKILL.md",
+   "skills/embedded-captions/assets/brand/CDPR-fankit-terms.txt",
+   "skills/embedded-captions/assets/brand/CyberpunkReplica.ttf",
+   "skills/embedded-captions/assets/brand/cyberpunk-widths.json",
+   "skills/embedded-captions/assets/fonts/char-widths.json",
+   "skills/embedded-captions/assets/strokefonts/HersheyScript1.svg",
+   "skills/embedded-captions/assets/strokefonts/HersheyScriptMed.svg",
+   "skills/embedded-captions/dna/README.md",
+   "skills/embedded-captions/dna/chrome.json",
+   "skills/embedded-captions/dna/cream.json",
+   "skills/embedded-captions/dna/documentary.json",
+   "skills/embedded-captions/dna/editorial.json",
+   "skills/embedded-captions/dna/glitch.json",
+   "skills/embedded-captions/dna/ink.json",
+   "skills/embedded-captions/dna/keynote.json",
+   "skills/embedded-captions/dna/loud.json",
+   "skills/embedded-captions/dna/neon.json",
+   "skills/embedded-captions/dna/velocity.json",
+   "skills/embedded-captions/modes/cinematic/README.md",
+   "skills/embedded-captions/modes/cinematic/_archive/champion/spec.md",
+   "skills/embedded-captions/modes/cinematic/_archive/champion/template.html",
+   "skills/embedded-captions/modes/cinematic/_archive/memory-wall/spec.md",
+   "skills/embedded-captions/modes/cinematic/_archive/memory-wall/template.html",
+   "skills/embedded-captions/modes/cinematic/_archive/portrait-header/spec.md",
+   "skills/embedded-captions/modes/cinematic/_archive/portrait-header/template.html",
+   "skills/embedded-captions/modes/cinematic/cinematic-cream/spec.md",
+   "skills/embedded-captions/modes/cinematic/cinematic-cream/template.html",
+   "skills/embedded-captions/modes/cinematic/engine.html",
+   "skills/embedded-captions/modes/standard/_anatomy.md",
+   "skills/embedded-captions/modes/standard/_motion.md",
+   "skills/embedded-captions/modes/standard/fonts/build-fonts-css.cjs",
+   "skills/embedded-captions/modes/standard/fonts/files/anton-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/audiowide-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/baloo-2-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/baloo-2-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/bangers-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/bodoni-moda-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/bodoni-moda-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/caveat-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/caveat-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/chakra-petch-latin-500-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/chakra-petch-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/cinzel-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/cinzel-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/cormorant-garamond-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/cormorant-garamond-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/creepster-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/fredoka-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/fredoka-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-500-italic.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-500-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-600-italic.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-600-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-800-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/inter-latin-900-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/monoton-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/orbitron-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/orbitron-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/permanent-marker-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/press-start-2p-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/rajdhani-latin-500-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/rajdhani-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/saira-stencil-one-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/shippori-mincho-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/shippori-mincho-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/sora-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/sora-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/space-grotesk-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/space-grotesk-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/special-elite-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/teko-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/teko-latin-700-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/files/vt323-latin-400-normal.woff2",
+   "skills/embedded-captions/modes/standard/fonts/fonts.css",
+   "skills/embedded-captions/references/aesthetic-principles.md",
+   "skills/embedded-captions/references/anti-patterns.md",
+   "skills/embedded-captions/references/bespoke-vs-presets.md",
+   "skills/embedded-captions/references/caption-grouping.md",
+   "skills/embedded-captions/references/composition-craft.md",
+   "skills/embedded-captions/references/direction-catalog.md",
+   "skills/embedded-captions/references/example-renders/champion.html",
+   "skills/embedded-captions/references/example-renders/memory-wall.html",
+   "skills/embedded-captions/references/failure-modes.md",
+   "skills/embedded-captions/references/layout-heuristics.md",
+   "skills/embedded-captions/references/motion-vocabulary.md",
+   "skills/embedded-captions/references/rail.md",
+   "skills/embedded-captions/references/reference-bar.md",
+   "skills/embedded-captions/references/scene-types.md",
+   "skills/embedded-captions/references/test-set.md",
+   "skills/embedded-captions/references/typographic-moves.md",
+   "skills/embedded-captions/references/typography-presets.md",
+   "skills/embedded-captions/scripts/audio-envelope.cjs",
+   "skills/embedded-captions/scripts/check-occlusion.cjs",
+   "skills/embedded-captions/scripts/check-overflow.cjs",
+   "skills/embedded-captions/scripts/check-rail-climax.cjs",
+   "skills/embedded-captions/scripts/check-timing.cjs",
+   "skills/embedded-captions/scripts/fill-timings.cjs",
+   "skills/embedded-captions/scripts/fit-fonts.cjs",
+   "skills/embedded-captions/scripts/gen-stroke-path.py",
+   "skills/embedded-captions/scripts/inject-fonts.cjs",
+   "skills/embedded-captions/scripts/lib-dna.cjs",
+   "skills/embedded-captions/scripts/make-cinematic.cjs",
+   "skills/embedded-captions/scripts/make-composition.cjs",
+   "skills/embedded-captions/scripts/make-theme.cjs",
+   "skills/embedded-captions/scripts/matte.cjs",
+   "skills/embedded-captions/scripts/measure-layout.cjs",
+   "skills/embedded-captions/scripts/prepare.sh",
+   "skills/embedded-captions/scripts/preview-frames.cjs",
+   "skills/embedded-captions/scripts/render-and-composite.sh",
+   "skills/embedded-captions/scripts/render-theme.sh",
+   "skills/embedded-captions/scripts/safe-zones.cjs",
+   "skills/embedded-captions/scripts/transcribe.cjs",
+   "skills/embedded-captions/themes/PORTING.md",
+   "skills/embedded-captions/themes/README.md",
+   "skills/embedded-captions/themes/anchor.json",
+   "skills/embedded-captions/themes/arcade.json",
+   "skills/embedded-captions/themes/aurora.json",
+   "skills/embedded-captions/themes/biolume.json",
+   "skills/embedded-captions/themes/brush.json",
+   "skills/embedded-captions/themes/chalkboard.json",
+   "skills/embedded-captions/themes/dossier.json",
+   "skills/embedded-captions/themes/graffiti.json",
+   "skills/embedded-captions/themes/hologram.json",
+   "skills/embedded-captions/themes/inkwater.json",
+   "skills/embedded-captions/themes/laser.json",
+   "skills/embedded-captions/themes/lastpage.json",
+   "skills/embedded-captions/themes/neonsign.json",
+   "skills/embedded-captions/themes/nightcity.json",
+   "skills/embedded-captions/themes/ordnance.json",
+   "skills/embedded-captions/themes/papercut.json",
+   "skills/embedded-captions/themes/popup.json",
+   "skills/embedded-captions/themes/ransom.json",
+   "skills/embedded-captions/themes/scoreboard.json",
+   "skills/embedded-captions/themes/spectrum.json",
+   "skills/embedded-captions/themes/stardust.json",
+   "skills/embedded-captions/themes/stomp.json",
+   "skills/embedded-captions/themes/terminal.json",
+   "skills/embedded-captions/themes/thunder.json",
+   "skills/embedded-captions/themes/transit.json",
+   "skills/embedded-captions/themes/vhs.json",
+   "skills/embedded-captions/來源與授權.txt"
+  ],
+  "emotion-director": [
+   "skills/emotion-director/SKILL.md"
+  ],
+  "faceless-explainer": [
+   "skills/faceless-explainer/SKILL.md",
+   "skills/faceless-explainer/references/cut-catalog.md",
+   "skills/faceless-explainer/references/motion-language.md",
+   "skills/faceless-explainer/references/story-design.md",
+   "skills/faceless-explainer/references/visual-design.md",
+   "skills/faceless-explainer/scripts/assemble-index.mjs",
+   "skills/faceless-explainer/scripts/assemble-index.test.mjs",
+   "skills/faceless-explainer/scripts/audio.mjs",
+   "skills/faceless-explainer/scripts/audio.test.mjs",
+   "skills/faceless-explainer/scripts/build-frame.mjs",
+   "skills/faceless-explainer/scripts/captions.mjs",
+   "skills/faceless-explainer/scripts/captions.test.mjs",
+   "skills/faceless-explainer/scripts/frame-packets.mjs",
+   "skills/faceless-explainer/scripts/frame-packets.test.mjs",
+   "skills/faceless-explainer/scripts/lib/assets.mjs",
+   "skills/faceless-explainer/scripts/lib/dimensions.mjs",
+   "skills/faceless-explainer/scripts/lib/pad-frame-duration.mjs",
+   "skills/faceless-explainer/scripts/lib/storyboard.mjs",
+   "skills/faceless-explainer/scripts/lib/tokens.mjs",
+   "skills/faceless-explainer/scripts/lib/transition-registry.mjs",
+   "skills/faceless-explainer/scripts/lib/transitions.json",
+   "skills/faceless-explainer/scripts/transitions.mjs",
+   "skills/faceless-explainer/scripts/transitions.test.mjs",
+   "skills/faceless-explainer/sub-agents/frame-worker.md"
+  ],
+  "flow-bgm-cc": [
+   "skills/flow-bgm-cc/CREDITS_標示作者.txt",
+   "skills/flow-bgm-cc/SKILL.md",
+   "skills/flow-bgm-cc/music/calm_Aerosol-of-my-Love_100bpm.mp3",
+   "skills/flow-bgm-cc/music/warm_Carefree_96bpm.mp3"
+  ],
+  "gsap": [
+   "skills/gsap/LICENSE",
+   "skills/gsap/SKILL.md",
+   "skills/gsap/gsap-core/REFERENCE.md",
+   "skills/gsap/gsap-frameworks/REFERENCE.md",
+   "skills/gsap/gsap-performance/REFERENCE.md",
+   "skills/gsap/gsap-plugins/REFERENCE.md",
+   "skills/gsap/gsap-react/REFERENCE.md",
+   "skills/gsap/gsap-scrolltrigger/REFERENCE.md",
+   "skills/gsap/gsap-timeline/REFERENCE.md",
+   "skills/gsap/gsap-utils/REFERENCE.md",
+   "skills/gsap/hyperframes-gsap-zh/REFERENCE.md",
+   "skills/gsap/hyperframes-gsap-zh/references/effects.md"
+  ],
+  "guizang-material-illustration": [
+   "skills/guizang-material-illustration/README.md",
+   "skills/guizang-material-illustration/SKILL.md",
+   "skills/guizang-material-illustration/agents/openai.yaml",
+   "skills/guizang-material-illustration/assets/prompt-template.md",
+   "skills/guizang-material-illustration/references/chart-beautify.md",
+   "skills/guizang-material-illustration/references/prompt-patterns.md",
+   "skills/guizang-material-illustration/references/qa-checklist.md",
+   "skills/guizang-material-illustration/references/reference-gathering.md",
+   "skills/guizang-material-illustration/references/use-cases-and-routing.md",
+   "skills/guizang-material-illustration/references/visual-style.md"
+  ],
+  "handwrite-ad": [
+   "skills/handwrite-ad/SKILL.md",
+   "skills/handwrite-ad/assets/fonts/Caveat.ttf",
+   "skills/handwrite-ad/assets/fonts/Iansui-Regular.ttf",
+   "skills/handwrite-ad/assets/fonts/JasonHandwriting4-SemiBold.ttf",
+   "skills/handwrite-ad/assets/fonts/OFL-Caveat.txt",
+   "skills/handwrite-ad/assets/fonts/OFL-Iansui.txt",
+   "skills/handwrite-ad/assets/fonts/OFL-JasonHandwriting.txt",
+   "skills/handwrite-ad/assets/hand/hand.json",
+   "skills/handwrite-ad/assets/hand/hand.png",
+   "skills/handwrite-ad/assets/icons/100.svg",
+   "skills/handwrite-ad/assets/icons/LICENSE-FluentEmoji-MIT.txt",
+   "skills/handwrite-ad/assets/icons/book.svg",
+   "skills/handwrite-ad/assets/icons/bookmark.svg",
+   "skills/handwrite-ad/assets/icons/books.svg",
+   "skills/handwrite-ad/assets/icons/brain.svg",
+   "skills/handwrite-ad/assets/icons/bulb.svg",
+   "skills/handwrite-ad/assets/icons/calendar.svg",
+   "skills/handwrite-ad/assets/icons/cart.svg",
+   "skills/handwrite-ad/assets/icons/chart.svg",
+   "skills/handwrite-ad/assets/icons/check.svg",
+   "skills/handwrite-ad/assets/icons/clap.svg",
+   "skills/handwrite-ad/assets/icons/clipboard.svg",
+   "skills/handwrite-ad/assets/icons/clock.svg",
+   "skills/handwrite-ad/assets/icons/cloud.svg",
+   "skills/handwrite-ad/assets/icons/crown.svg",
+   "skills/handwrite-ad/assets/icons/database.svg",
+   "skills/handwrite-ad/assets/icons/email.svg",
+   "skills/handwrite-ad/assets/icons/envelope.svg",
+   "skills/handwrite-ad/assets/icons/exclaim.svg",
+   "skills/handwrite-ad/assets/icons/eyes.svg",
+   "skills/handwrite-ad/assets/icons/fire.svg",
+   "skills/handwrite-ad/assets/icons/folder.svg",
+   "skills/handwrite-ad/assets/icons/gear.svg",
+   "skills/handwrite-ad/assets/icons/gift.svg",
+   "skills/handwrite-ad/assets/icons/globe.svg",
+   "skills/handwrite-ad/assets/icons/grad.svg",
+   "skills/handwrite-ad/assets/icons/growth.svg",
+   "skills/handwrite-ad/assets/icons/hammer-wrench.svg",
+   "skills/handwrite-ad/assets/icons/handshake.svg",
+   "skills/handwrite-ad/assets/icons/heart.svg",
+   "skills/handwrite-ad/assets/icons/key.svg",
+   "skills/handwrite-ad/assets/icons/laptop.svg",
+   "skills/handwrite-ad/assets/icons/lightning.svg",
+   "skills/handwrite-ad/assets/icons/link.svg",
+   "skills/handwrite-ad/assets/icons/lobster.svg",
+   "skills/handwrite-ad/assets/icons/lock.svg",
+   "skills/handwrite-ad/assets/icons/megaphone.svg",
+   "skills/handwrite-ad/assets/icons/memo.svg",
+   "skills/handwrite-ad/assets/icons/money.svg",
+   "skills/handwrite-ad/assets/icons/muscle.svg",
+   "skills/handwrite-ad/assets/icons/notebook.svg",
+   "skills/handwrite-ad/assets/icons/ok.svg",
+   "skills/handwrite-ad/assets/icons/open-folder.svg",
+   "skills/handwrite-ad/assets/icons/package.svg",
+   "skills/handwrite-ad/assets/icons/party.svg",
+   "skills/handwrite-ad/assets/icons/pencil.svg",
+   "skills/handwrite-ad/assets/icons/phone.svg",
+   "skills/handwrite-ad/assets/icons/plug.svg",
+   "skills/handwrite-ad/assets/icons/pointright.svg",
+   "skills/handwrite-ad/assets/icons/pushpin.svg",
+   "skills/handwrite-ad/assets/icons/puzzle.svg",
+   "skills/handwrite-ad/assets/icons/question.svg",
+   "skills/handwrite-ad/assets/icons/robot.svg",
+   "skills/handwrite-ad/assets/icons/rocket.svg",
+   "skills/handwrite-ad/assets/icons/school.svg",
+   "skills/handwrite-ad/assets/icons/scroll.svg",
+   "skills/handwrite-ad/assets/icons/search.svg",
+   "skills/handwrite-ad/assets/icons/shield.svg",
+   "skills/handwrite-ad/assets/icons/sparkles.svg",
+   "skills/handwrite-ad/assets/icons/speech.svg",
+   "skills/handwrite-ad/assets/icons/star.svg",
+   "skills/handwrite-ad/assets/icons/target.svg",
+   "skills/handwrite-ad/assets/icons/teacher.svg",
+   "skills/handwrite-ad/assets/icons/technologist.svg",
+   "skills/handwrite-ad/assets/icons/thought.svg",
+   "skills/handwrite-ad/assets/icons/thumbsup.svg",
+   "skills/handwrite-ad/assets/icons/toolbox.svg",
+   "skills/handwrite-ad/assets/icons/trophy.svg",
+   "skills/handwrite-ad/assets/icons/wrench.svg",
+   "skills/handwrite-ad/assets/template.html",
+   "skills/handwrite-ad/examples/mcp-vs-skill.json",
+   "skills/handwrite-ad/examples/sketch/art/s1_desk.jpg",
+   "skills/handwrite-ad/examples/sketch/art/s2_girl.jpg",
+   "skills/handwrite-ad/examples/sketch/art/s2_path.jpg",
+   "skills/handwrite-ad/examples/sketch/art/s3_bubble.jpg",
+   "skills/handwrite-ad/examples/sketch/next-step.json",
+   "skills/handwrite-ad/references/script-schema.md",
+   "skills/handwrite-ad/requirements.txt",
+   "skills/handwrite-ad/scripts/asr_check.py",
+   "skills/handwrite-ad/scripts/build.py",
+   "skills/handwrite-ad/scripts/common.py",
+   "skills/handwrite-ad/scripts/make.py",
+   "skills/handwrite-ad/scripts/music.py",
+   "skills/handwrite-ad/scripts/sketch.py",
+   "skills/handwrite-ad/scripts/synth_bgm.py",
+   "skills/handwrite-ad/scripts/themes.py",
+   "skills/handwrite-ad/scripts/verify.py",
+   "skills/handwrite-ad/scripts/voice.py"
+  ],
+  "hyperframes-registry": [
+   "skills/hyperframes-registry/SKILL.md",
+   "skills/hyperframes-registry/examples/add-block.md",
+   "skills/hyperframes-registry/examples/add-component.md",
+   "skills/hyperframes-registry/references/component-quality-bar.md",
+   "skills/hyperframes-registry/references/contributing.md",
+   "skills/hyperframes-registry/references/demo-html-pattern.md",
+   "skills/hyperframes-registry/references/discovery.md",
+   "skills/hyperframes-registry/references/install-locations.md",
+   "skills/hyperframes-registry/references/placeholder-material.md",
+   "skills/hyperframes-registry/references/search.md",
+   "skills/hyperframes-registry/references/templates.md",
+   "skills/hyperframes-registry/references/wiring-blocks.md",
+   "skills/hyperframes-registry/references/wiring-components.md"
+  ],
+  "imagegen": [
+   "skills/imagegen/LICENSE.txt",
+   "skills/imagegen/SKILL.md",
+   "skills/imagegen/agents/openai.yaml",
+   "skills/imagegen/assets/imagegen-small.svg",
+   "skills/imagegen/assets/imagegen.png",
+   "skills/imagegen/references/cli.md",
+   "skills/imagegen/references/codex-network.md",
+   "skills/imagegen/references/image-api.md",
+   "skills/imagegen/references/prompting.md",
+   "skills/imagegen/references/sample-prompts.md",
+   "skills/imagegen/scripts/image_gen.py"
+  ],
+  "liang-cut-broll": [
+   "skills/liang-cut-broll/SKILL.md",
+   "skills/liang-cut-broll/gallery.html",
+   "skills/liang-cut-broll/styles/darkterm.md",
+   "skills/liang-cut-broll/styles/editorial.md",
+   "skills/liang-cut-broll/styles/flap.md",
+   "skills/liang-cut-broll/styles/glass.md",
+   "skills/liang-cut-broll/styles/minimal.md",
+   "skills/liang-cut-broll/styles/neon.md",
+   "skills/liang-cut-broll/styles/pastel.md",
+   "skills/liang-cut-broll/styles/pop.md",
+   "skills/liang-cut-broll/styles/vhs.md",
+   "skills/liang-cut-broll/styles/vox.md",
+   "skills/liang-cut-broll/templates/darkterm.html",
+   "skills/liang-cut-broll/templates/darkterm_status.html",
+   "skills/liang-cut-broll/templates/darkterm_top.html",
+   "skills/liang-cut-broll/templates/editorial.html",
+   "skills/liang-cut-broll/templates/editorial_contents.html",
+   "skills/liang-cut-broll/templates/editorial_quote.html",
+   "skills/liang-cut-broll/templates/flap.html",
+   "skills/liang-cut-broll/templates/flap_board.html",
+   "skills/liang-cut-broll/templates/flap_stats.html",
+   "skills/liang-cut-broll/templates/glass.html",
+   "skills/liang-cut-broll/templates/glass_notif.html",
+   "skills/liang-cut-broll/templates/glass_widgets.html",
+   "skills/liang-cut-broll/templates/minimal.html",
+   "skills/liang-cut-broll/templates/minimal_chart.html",
+   "skills/liang-cut-broll/templates/minimal_steps.html",
+   "skills/liang-cut-broll/templates/neon.html",
+   "skills/liang-cut-broll/templates/neon_menu.html",
+   "skills/liang-cut-broll/templates/neon_score.html",
+   "skills/liang-cut-broll/templates/pastel.html",
+   "skills/liang-cut-broll/templates/pastel_log.html",
+   "skills/liang-cut-broll/templates/pastel_steps.html",
+   "skills/liang-cut-broll/templates/pop.html",
+   "skills/liang-cut-broll/templates/pop_chart.html",
+   "skills/liang-cut-broll/templates/pop_strip.html",
+   "skills/liang-cut-broll/templates/vhs.html",
+   "skills/liang-cut-broll/templates/vhs_chart.html",
+   "skills/liang-cut-broll/templates/vhs_log.html",
+   "skills/liang-cut-broll/templates/vox.html",
+   "skills/liang-cut-broll/templates/vox_board.html",
+   "skills/liang-cut-broll/templates/vox_chart.html",
+   "skills/liang-cut-broll/templates/vox_news.html"
+  ],
+  "liang-emotional-short": [
+   "skills/liang-emotional-short/SKILL.md",
+   "skills/liang-emotional-short/references/spec-example.json",
+   "skills/liang-emotional-short/scripts/build_short.py",
+   "skills/liang-emotional-short/scripts/make_sheet.py"
+  ],
+  "liang-stock-footage": [
+   "skills/liang-stock-footage/SKILL.md",
+   "skills/liang-stock-footage/scripts/_stock_last_search.json",
+   "skills/liang-stock-footage/scripts/stock.py"
+  ],
+  "manim-composer": [
+   "skills/manim-composer/LICENSE_AGPL-3.0.txt",
+   "skills/manim-composer/SKILL.md",
+   "skills/manim-composer/references/narrative-patterns.md",
+   "skills/manim-composer/references/scene-examples.md",
+   "skills/manim-composer/references/visual-techniques.md",
+   "skills/manim-composer/templates/scenes-template.md",
+   "skills/manim-composer/來源與授權.txt"
+  ],
+  "motion-design": [
+   "skills/motion-design/LICENSE",
+   "skills/motion-design/SKILL.md",
+   "skills/motion-design/director/choreography.md",
+   "skills/motion-design/director/context-adaptation.md",
+   "skills/motion-design/director/core-philosophy.md",
+   "skills/motion-design/director/decision-framework.md",
+   "skills/motion-design/director/disney-principles.md",
+   "skills/motion-design/director/emotion-mapping.md",
+   "skills/motion-design/director/motion-personality.md",
+   "skills/motion-design/director/narrative-structure.md",
+   "skills/motion-design/patterns/ambient-continuous.md",
+   "skills/motion-design/patterns/entrance-exit.md",
+   "skills/motion-design/patterns/multi-element.md",
+   "skills/motion-design/patterns/state-feedback.md",
+   "skills/motion-design/reference/property-selection.md",
+   "skills/motion-design/reference/quality-checklist.md",
+   "skills/motion-design/reference/timing-easing-tables.md",
+   "skills/motion-design/reference/troubleshooting.md"
+  ],
+  "motion-graphics": [
+   "skills/motion-graphics/LICENSE_Apache-2.0.txt",
+   "skills/motion-graphics/SKILL.md",
+   "skills/motion-graphics/agents/builder.md",
+   "skills/motion-graphics/agents/director.md",
+   "skills/motion-graphics/agents/finalize.md",
+   "skills/motion-graphics/catalog-map.md",
+   "skills/motion-graphics/categories/asset-fusion/module.md",
+   "skills/motion-graphics/categories/charts/module.md",
+   "skills/motion-graphics/categories/kinetic-type/module.md",
+   "skills/motion-graphics/categories/logo-reveal/module.md",
+   "skills/motion-graphics/categories/lower-thirds/module.md",
+   "skills/motion-graphics/categories/maps/bake-basemap.mjs",
+   "skills/motion-graphics/categories/maps/module.md",
+   "skills/motion-graphics/categories/news/module.md",
+   "skills/motion-graphics/categories/stat/module.md",
+   "skills/motion-graphics/categories/tweet/module.md",
+   "skills/motion-graphics/categories/webpage/module.md",
+   "skills/motion-graphics/grounding/PROTOCOL.md",
+   "skills/motion-graphics/grounding/locate.mjs",
+   "skills/motion-graphics/phases/source/guide.md",
+   "skills/motion-graphics/references/builder-contract.md",
+   "skills/motion-graphics/references/motion-vocabulary.md",
+   "skills/motion-graphics/references/shot-plan-ir.md",
+   "skills/motion-graphics/samples/asset-fusion/_ref-circle-highlight.html",
+   "skills/motion-graphics/來源與授權.txt"
+  ],
+  "pixel2motion": [
+   "skills/pixel2motion/LICENSE",
+   "skills/pixel2motion/SKILL.md",
+   "skills/pixel2motion/agents/openai.yaml",
+   "skills/pixel2motion/references/html-delivery-template.md",
+   "skills/pixel2motion/references/motion-personality.md",
+   "skills/pixel2motion/references/reveal-patterns.md",
+   "skills/pixel2motion/references/ribbon-fitting.md",
+   "skills/pixel2motion/references/twelve-principles-for-logos.md",
+   "skills/pixel2motion/scripts/animate_svg_html.py",
+   "skills/pixel2motion/scripts/animate_svg_showcase.py",
+   "skills/pixel2motion/scripts/capture_motion_frames.py",
+   "skills/pixel2motion/scripts/export_claude_videos.mjs",
+   "skills/pixel2motion/scripts/fit_ribbon_centerline.py",
+   "skills/pixel2motion/scripts/overlay_progress_strip.py",
+   "skills/pixel2motion/scripts/probe_motion_continuity.py",
+   "skills/pixel2motion/scripts/raster_logo_trace.py",
+   "skills/pixel2motion/scripts/render_overlay.py",
+   "skills/pixel2motion/scripts/svg_path_audit.py",
+   "skills/pixel2motion/scripts/svg_to_js_html.py"
+  ],
+  "pop-halftone-kit": [
+   "skills/pop-halftone-kit/AGENTS.md",
+   "skills/pop-halftone-kit/GEMINI.md",
+   "skills/pop-halftone-kit/README.md",
+   "skills/pop-halftone-kit/SKILL.md",
+   "skills/pop-halftone-kit/assets/fonts/IBMPlexMono-Bold.ttf",
+   "skills/pop-halftone-kit/assets/fonts/IBMPlexMono-OFL.txt",
+   "skills/pop-halftone-kit/assets/gaussian-field.js",
+   "skills/pop-halftone-kit/assets/pop-halftone.css",
+   "skills/pop-halftone-kit/assets/pop-props-more.css",
+   "skills/pop-halftone-kit/assets/pop-props-more.js",
+   "skills/pop-halftone-kit/assets/pop-props.js",
+   "skills/pop-halftone-kit/assets/pop-themes.js",
+   "skills/pop-halftone-kit/assets/prop-3d.js",
+   "skills/pop-halftone-kit/assets/prop-rain.js",
+   "skills/pop-halftone-kit/examples/ai-fatigue-satire-sheet.jpg",
+   "skills/pop-halftone-kit/examples/showcase-60s-sheet.jpg",
+   "skills/pop-halftone-kit/references/style-guide.md",
+   "skills/pop-halftone-kit/scripts/gen-music.mjs",
+   "skills/pop-halftone-kit/scripts/install-into-project.ps1",
+   "skills/pop-halftone-kit/scripts/install.mjs",
+   "skills/pop-halftone-kit/templates/ai-fatigue-satire/index.html",
+   "skills/pop-halftone-kit/templates/ai-fatigue-satire/score.json",
+   "skills/pop-halftone-kit/templates/showcase-60s/index.html",
+   "skills/pop-halftone-kit/templates/showcase-60s/score.json"
+  ],
+  "promo-ad-forge": [
+   "skills/promo-ad-forge/SKILL.md",
+   "skills/promo-ad-forge/assets/fonts/NotoSansTC-VF.ttf",
+   "skills/promo-ad-forge/assets/fonts/OFL-NotoSansTC.txt",
+   "skills/promo-ad-forge/music-library/CREDITS_標示作者.txt",
+   "skills/promo-ad-forge/music-library/README.md",
+   "skills/promo-ad-forge/music-library/library.csv",
+   "skills/promo-ad-forge/music-library/library.json",
+   "skills/promo-ad-forge/music-library/pop_活潑/Wepa_120bpm.mp3",
+   "skills/promo-ad-forge/music-library/warm_溫暖/Carefree_96bpm.mp3",
+   "skills/promo-ad-forge/references/categories.md",
+   "skills/promo-ad-forge/references/context-intake.md",
+   "skills/promo-ad-forge/references/director-vocab.md",
+   "skills/promo-ad-forge/references/example-masterclass.md",
+   "skills/promo-ad-forge/references/music-library.md",
+   "skills/promo-ad-forge/references/reference-analysis.md",
+   "skills/promo-ad-forge/references/reference-sources.md",
+   "skills/promo-ad-forge/references/web-pop.md",
+   "skills/promo-ad-forge/scripts/analyze_reference.py",
+   "skills/promo-ad-forge/scripts/build_ad.py",
+   "skills/promo-ad-forge/scripts/extend_music_library.py",
+   "skills/promo-ad-forge/scripts/fetch_music_library.py",
+   "skills/promo-ad-forge/scripts/ingest_source.py",
+   "skills/promo-ad-forge/scripts/music_beats.py",
+   "skills/promo-ad-forge/scripts/synth_bgm.py",
+   "skills/promo-ad-forge/scripts/verify_ad.py",
+   "skills/promo-ad-forge/templates/beat-ad.html",
+   "skills/promo-ad-forge/templates/course-promo-16x9.html",
+   "skills/promo-ad-forge/templates/web-pop.html"
+  ],
+  "short-video-editor": [
+   "skills/short-video-editor/SKILL.md",
+   "skills/short-video-editor/assets/GenSenRounded2TW-B.otf",
+   "skills/short-video-editor/assets/silero_vad.onnx",
+   "skills/short-video-editor/scripts/plan_cuts.py",
+   "skills/short-video-editor/scripts/render.py",
+   "skills/short-video-editor/scripts/setup.py",
+   "skills/short-video-editor/scripts/transcribe.py",
+   "skills/short-video-editor/授權說明.txt"
+  ],
+  "slideshow": [
+   "skills/slideshow/LICENSE_Apache-2.0.txt",
+   "skills/slideshow/SKILL.md",
+   "skills/slideshow/references/standalone-harness.md",
+   "skills/slideshow/來源與授權.txt"
+  ],
+  "stickman-story-video": [
+   "skills/stickman-story-video/SKILL.md",
+   "skills/stickman-story-video/agents/openai.yaml",
+   "skills/stickman-story-video/assets/audio/youth-upbeat-loop.wav",
+   "skills/stickman-story-video/assets/fonts/NotoSansTC-Regular.ttf",
+   "skills/stickman-story-video/assets/fonts/OFL-LICENSE.txt",
+   "skills/stickman-story-video/assets/storyboard-example.json",
+   "skills/stickman-story-video/references/storyboard-schema.md",
+   "skills/stickman-story-video/scripts/generate_youth_bgm.py",
+   "skills/stickman-story-video/scripts/requirements.txt",
+   "skills/stickman-story-video/scripts/stickman_video.py"
+  ],
+  "story-to-handdrawn-video": [
+   "skills/story-to-handdrawn-video/LICENSE",
+   "skills/story-to-handdrawn-video/SKILL.md",
+   "skills/story-to-handdrawn-video/agents/openai.yaml",
+   "skills/story-to-handdrawn-video/references/asset-workflow.md",
+   "skills/story-to-handdrawn-video/references/reference-style-workflow.md",
+   "skills/story-to-handdrawn-video/scripts/run_story_video.py"
+  ],
+  "website-to-video": [
+   "skills/website-to-video/LICENSE_Apache-2.0.txt",
+   "skills/website-to-video/SKILL.md",
+   "skills/website-to-video/assets/sfx/CREDITS.md",
+   "skills/website-to-video/assets/sfx/chime.mp3",
+   "skills/website-to-video/assets/sfx/click-soft.mp3",
+   "skills/website-to-video/assets/sfx/click.mp3",
+   "skills/website-to-video/assets/sfx/error.mp3",
+   "skills/website-to-video/assets/sfx/glitch-1.mp3",
+   "skills/website-to-video/assets/sfx/glitch-2.mp3",
+   "skills/website-to-video/assets/sfx/glitch-3.mp3",
+   "skills/website-to-video/assets/sfx/impact-bass-1.mp3",
+   "skills/website-to-video/assets/sfx/impact-bass-2.mp3",
+   "skills/website-to-video/assets/sfx/key-press.mp3",
+   "skills/website-to-video/assets/sfx/manifest.json",
+   "skills/website-to-video/assets/sfx/notification.mp3",
+   "skills/website-to-video/assets/sfx/ping.mp3",
+   "skills/website-to-video/assets/sfx/pop.mp3",
+   "skills/website-to-video/assets/sfx/riser.mp3",
+   "skills/website-to-video/assets/sfx/sparkle.mp3",
+   "skills/website-to-video/assets/sfx/typing.mp3",
+   "skills/website-to-video/assets/sfx/whoosh-cinematic.mp3",
+   "skills/website-to-video/assets/sfx/whoosh-short.mp3",
+   "skills/website-to-video/assets/sfx/whoosh.mp3",
+   "skills/website-to-video/references/beat-builder-guide.md",
+   "skills/website-to-video/references/capabilities.md",
+   "skills/website-to-video/references/step-0-capture.md",
+   "skills/website-to-video/references/step-1-design.md",
+   "skills/website-to-video/references/step-2-brief.md",
+   "skills/website-to-video/references/step-3-storyboard.md",
+   "skills/website-to-video/references/step-4-vo.md",
+   "skills/website-to-video/references/step-5-build.md",
+   "skills/website-to-video/references/step-6-validate.md",
+   "skills/website-to-video/scripts/w2h-verify.mjs",
+   "skills/website-to-video/來源與授權.txt"
+  ]
+ },
+ "info": {
+  "ai-teaching-video": {
+   "use": "講稿自動變投影片＋免費旁白＋字幕",
+   "mb": 0.12
+  },
+  "caption-doctor": {
+   "use": "字幕清理：錯字、斷句、簡轉繁",
+   "mb": 0.02
+  },
+  "consistency-checker": {
+   "use": "檢查各鏡角色、制服、配色有沒有跑掉",
+   "mb": 0.02
+  },
+  "content-to-motion-video": {
+   "use": "48 種動畫風格做片頭、字卡、標註，配樂自己合成",
+   "mb": 0.1
+  },
+  "embedded-captions": {
+   "use": "32 種好看的字幕風格",
+   "mb": 3.37
+  },
+  "emotion-director": {
+   "use": "鏡頭語言＋情緒＋動作，讓 Flow 提示詞更有電影感",
+   "mb": 0.04
+  },
+  "faceless-explainer": {
+   "use": "HyperFrames 官方「文字變解說片」流程",
+   "mb": 0.24
+  },
+  "flow-bgm-cc": {
+   "use": "2 首 CC BY 配樂（溫暖、沉穩），片尾要標示作者",
+   "mb": 5.3
+  },
+  "gsap": {
+   "use": "網頁動畫寫法（讓字和圖動起來）",
+   "mb": 0.11
+  },
+  "guizang-material-illustration": {
+   "use": "帶繁中標籤的圖解插圖",
+   "mb": 0.05
+  },
+  "handwrite-ad": {
+   "use": "手寫白板／筆記本風知識短片（免費配音）",
+   "mb": 11.4
+  },
+  "hyperframes-registry": {
+   "use": "約 450 個現成轉場、字卡、圖表區塊",
+   "mb": 0.08
+  },
+  "imagegen": {
+   "use": "用 Codex 內建生圖畫插圖（免費）",
+   "mb": 0.09
+  },
+  "liang-cut-broll": {
+   "use": "10 種廣播級動態字卡風格（Vox、霓虹、VHS…）",
+   "mb": 0.44
+  },
+  "liang-emotional-short": {
+   "use": "實景素材挑片＋金句字卡＋旁白一條龍",
+   "mb": 0.02
+  },
+  "liang-stock-footage": {
+   "use": "搜尋下載 Pixabay／Pexels 免費可商用影片",
+   "mb": 0.02
+  },
+  "manim-composer": {
+   "use": "數學、物理概念的 Manim 動畫規劃",
+   "mb": 0.06
+  },
+  "motion-design": {
+   "use": "動畫節奏與緩動原則，動作自然不廉價",
+   "mb": 0.06
+  },
+  "motion-graphics": {
+   "use": "HyperFrames 官方 10 秒片頭／Logo 動畫流程",
+   "mb": 0.12
+  },
+  "pixel2motion": {
+   "use": "Logo 圖檔變成平滑向量動畫",
+   "mb": 0.17
+  },
+  "pop-halftone-kit": {
+   "use": "普普網點風字卡＋程式合成配樂音效",
+   "mb": 1.46
+  },
+  "promo-ad-forge": {
+   "use": "招生宣傳動態片頭、資訊字卡、報名結尾（附 CC BY 配樂）",
+   "mb": 9.61
+  },
+  "short-video-editor": {
+   "use": "自己錄的口播影片：去停頓、贅詞、重講的句子，燒上源泉圓體字幕",
+   "mb": 15.71
+  },
+  "slideshow": {
+   "use": "會動的投影片（逐條出現、重點放大）",
+   "mb": 0.08
+  },
+  "stickman-story-video": {
+   "use": "火柴人步驟示意動畫（免費離線）",
+   "mb": 12.61
+  },
+  "story-to-handdrawn-video": {
+   "use": "故事變手繪繪本動畫（3:4 直式）",
+   "mb": 0.02
+  },
+  "website-to-video": {
+   "use": "把課程網站畫面變成宣傳片段",
+   "mb": 1.52
+  }
+ }
+}

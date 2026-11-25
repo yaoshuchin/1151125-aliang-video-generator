@@ -1,0 +1,126 @@
+{
+ "engine": "Claude Code",
+ "date": "2026-11-13",
+ "category": "promo",
+ "quick": {
+  "summary": "一位老師原本覺得做影片很難，參加工作坊後用 AI 生成器 30 分鐘就做出課程宣傳片，學生看得目不轉睛，最後邀請大家報名。",
+  "keywords": "教師研習、AI 影片、寒假",
+  "shots": 4
+ },
+ "tasks": {
+  "audience": {
+   "seconds": 9.1,
+   "patch": {
+    "target": "國中小與高中職教師，特別是想在寒假進修、對影片製作沒經驗或覺得剪輯很難的老師",
+    "message": "不用會剪輯，參加寒假工作坊，30 分鐘就能用 AI 做出讓學生目不轉睛的第一支課程影片。",
+    "action": "點選影片下方連結，填寫報名表，報名寒假 AI 影音生成工作坊",
+    "keywords": "教師研習、AI 影片、寒假",
+    "avoid": "真實名人肖像或聲音、特定 AI 軟體或品牌商標、誇大不實的保證用語（如「保證學會」「零失敗」）、可辨識的學生正面臉孔與個資、暴力血腥或驚嚇畫面、艱澀技術術語堆疊"
+   }
+  },
+  "style": {
+   "seconds": 19.5,
+   "patch": {
+    "look": "溫暖紀錄片風格的寫實電影感：手持微晃但穩定的鏡頭、淺景深，搭配自然窗光與教室日光燈的柔和混光；畫面以老師的手部、螢幕、側臉與學生背影或剪影為主，不拍可辨識的學生正面臉孔；電腦螢幕畫面用簡潔通用介面示意，不出現任何特定軟體或品牌標誌；字卡用圓角無襯線字體搭配簡單淡入動畫，整體真實、親切、不浮誇",
+    "palette": "主色為暖米白與奶茶色，營造教室與研習空間的溫度；輔色為柔和木質棕（課桌、講台）與淡天空藍（螢幕光、寒假清爽感）；重點色為暖橘色，用於字卡標題、報名按鈕與關鍵數字「30 分鐘」；整體低飽和、高明亮，帶一點午後暖陽的金黃色調，陰影偏暖不偏冷",
+    "mood": "由「卡關的小焦慮」轉為「豁然開朗的成就感」：開頭老師面對剪輯畫面皺眉嘆氣，節奏略慢、色調稍淡；中段參加工作坊、動手操作，節奏輕快、光線轉亮；結尾學生專注看片、老師露出放心微笑，氣氛溫馨振奮，傳達「我也做得到」的鼓勵感，最後以親切邀請收尾",
+    "reference": "可參考教育紀錄片與公益短片常見的手法：以老師日常備課的真實場景開場，用近景特寫捕捉手指點選、螢幕亮起、生成進度條推進等細節；中段穿插工作坊多位老師並肩操作的溫暖群像；結尾用教室中學生背影齊看大螢幕、螢幕光映在桌面上的畫面帶出成果；配樂為輕柔鋼琴加木吉他，節奏由舒緩漸進到明亮，最後一鏡定格在暖色背景搭配報名資訊字卡",
+    "consistency": "每一鏡都要保持一致：同一位老師角色的外型與服裝（例如米色針織外套、深色長褲、短髮、無名人樣貌）；暖米白與暖橘的主色調及午後暖光方向（光源一律來自畫面左側窗戶）；16:9 橫式構圖與相同的淺景深手持質感；字卡字體、字級、圓角樣式與出現位置（畫面下方三分之一）；學生一律以背影、剪影或手部入鏡；螢幕介面維持同一套無品牌的簡潔示意設計；片尾統一放上「阿亮老師研習團隊」署名與報名提示"
+   }
+  },
+  "shots": {
+   "seconds": 22.2,
+   "patch": {
+    "title": "AI 影音生成工作坊招生：30 分鐘做出第一支影片",
+    "shots": [
+     {
+      "size": "近景",
+      "camera": "緩慢推近",
+      "visual": "午後窗光從畫面左側灑進教室，穿米色針織外套的短髮老師坐在木質課桌前，筆電螢幕上是密密麻麻的剪輯時間軸，桌角堆著待批改的作業簿，色調略淡",
+      "character": "短髮老師（米色針織外套、深色長褲）",
+      "action": "盯著螢幕皺眉，手撐額頭輕嘆一口氣，滑鼠游標在時間軸上來回卻不知從何下手",
+      "sec": 4,
+      "transition": "溶接",
+      "sfx": "輕柔鋼琴單音、滑鼠點擊聲、一聲輕嘆"
+     },
+     {
+      "size": "中景",
+      "camera": "左右搖",
+      "visual": "明亮的寒假研習教室，多位老師並肩坐在長桌前操作筆電，螢幕上是簡潔無品牌的生成介面，進度條穩定推進，畫面下方三分之一淡入暖橘字卡「30 分鐘，完成第一支影片」",
+      "character": "短髮老師與工作坊中的其他老師",
+      "action": "短髮老師跟著講師示範輸入文字、按下生成鍵，看到進度條完成後與鄰座老師相視點頭",
+      "sec": 5,
+      "transition": "匹配剪接",
+      "sfx": "木吉他加入、節奏轉輕快、鍵盤敲擊聲、完成提示音「叮」"
+     },
+     {
+      "size": "遠景",
+      "camera": "緩慢推近",
+      "visual": "教室窗簾半拉，前方大螢幕播放老師完成的課程宣傳片，前景是一排學生的背影與剪影，螢幕淡藍光映照在課桌面上，老師站在教室後方，臉上露出放心的微笑",
+      "character": "短髮老師、學生（僅背影與剪影入鏡）",
+      "action": "學生們身體微微前傾、專注看著大螢幕；老師雙手交握站在後方，輕輕點頭微笑",
+      "sec": 6,
+      "transition": "淡入淡出",
+      "sfx": "鋼琴與木吉他合奏漸強、教室安靜的環境音、學生輕聲讚嘆"
+     },
+     {
+      "size": "全景",
+      "camera": "固定",
+      "visual": "暖米白背景帶午後金黃光暈，畫面中央淡入暖橘標題字卡「寒假 AI 影音生成工作坊　報名中」，下方圓角按鈕寫著「點選下方連結報名」，右下角署名阿亮老師研習團隊",
+      "character": "無（字卡畫面）",
+      "action": "字卡依序淡入，報名按鈕輕微放大一次提示點選，最後畫面定格",
+      "sec": 5,
+      "transition": "直接切",
+      "sfx": "配樂明亮收尾、按鈕出現時的輕快提示音"
+     }
+    ]
+   }
+  },
+  "characters": {
+   "seconds": 14.7,
+   "patch": {
+    "characters": [
+     {
+      "name": "短髮老師",
+      "look": "約 35 歲的臺灣女性國中老師，俐落及耳短髮、黑髮自然微蓬，鵝蛋臉，五官柔和，戴細框圓眼鏡，膚色自然，表情從一開始的皺眉困擾轉為放心微笑，屬一般人樣貌、不像任何名人",
+      "outfit": "米色粗針織開襟外套，內搭白色圓領素面上衣，深灰色直筒長褲，咖啡色平底休閒鞋，脖子掛一條素色教師識別證掛繩（無文字與標誌），全身無品牌商標",
+      "personality": "認真負責、對學生很用心，面對新科技一開始有點焦慮、怕麻煩，但願意嘗試，學會後充滿成就感，親切溫暖、笑容讓人安心",
+      "anchor": "a Taiwanese female middle school teacher in her mid-30s, short chin-length straight black hair with slight natural volume, soft oval face, gentle features, thin round wire-frame glasses, natural skin tone, wearing a beige chunky-knit open cardigan over a plain white crew-neck top, dark charcoal straight-leg trousers, brown flat casual shoes, plain lanyard with blank ID card, no logos, ordinary non-celebrity appearance, warm soft afternoon window light from the left, consistent same person in every shot"
+     }
+    ]
+   }
+  },
+  "prompts": {
+   "seconds": 33.8,
+   "patch": {
+    "prompts": [
+     "Close-up, slow push-in, handheld, shallow depth of field. a Taiwanese female middle school teacher in her mid-30s, short chin-length straight black hair with slight natural volume, soft oval face, gentle features, thin round wire-frame glasses, natural skin tone, wearing a beige chunky-knit open cardigan over a plain white crew-neck top, dark charcoal straight-leg trousers, brown flat casual shoes, plain lanyard with blank ID card, no logos, ordinary non-celebrity appearance, warm soft afternoon window light from the left, consistent same person in every shot. At a wooden classroom desk, she frowns at a laptop's cluttered generic editing timeline, rests her forehead on her hand and sighs. Muted warm tones, realistic documentary style. No text, no subtitles, no logo.",
+     "Medium shot, left-right pan, shallow depth of field. a Taiwanese female middle school teacher in her mid-30s, short chin-length straight black hair with slight natural volume, soft oval face, gentle features, thin round wire-frame glasses, natural skin tone, wearing a beige chunky-knit open cardigan over a plain white crew-neck top, dark charcoal straight-leg trousers, brown flat casual shoes, plain lanyard with blank ID card, no logos, ordinary non-celebrity appearance, warm soft afternoon window light from the left, consistent same person in every shot. In a bright workshop room, she types at a laptop beside other teachers; a generic unbranded progress bar completes, she nods at her neighbor. Clean lower third, realistic documentary style. No text, no subtitles, no logo.",
+     "Wide shot, slow push-in, shallow depth of field. a Taiwanese female middle school teacher in her mid-30s, short chin-length straight black hair with slight natural volume, soft oval face, gentle features, thin round wire-frame glasses, natural skin tone, wearing a beige chunky-knit open cardigan over a plain white crew-neck top, dark charcoal straight-leg trousers, brown flat casual shoes, plain lanyard with blank ID card, no logos, ordinary non-celebrity appearance, warm soft afternoon window light from the left, consistent same person in every shot. In a classroom with half-drawn curtains, students seen only from behind lean toward a glowing screen, blue light on desks; she stands at the back smiling, nodding. Realistic documentary style. No text, no subtitles, no logo.",
+     "Full frame static shot, locked-off camera, 16:9. A clean warm off-white background with a soft golden afternoon light glow and gentle bokeh, subtle light leaks drifting slowly in from the left side. In the center, an empty soft warm-orange rounded rectangle panel fades in, and a smaller blank rounded button shape below it gently scales up once, then the frame holds still, leaving clear space for title overlays added later in editing. Low saturation, bright, cozy milk-tea and beige palette, minimal and calm, realistic soft-focus cinematic look. No text, no subtitles, no logo."
+    ]
+   }
+  },
+  "sound": {
+   "seconds": 19.1,
+   "patch": {
+    "narration": "做影片好難？剪輯軟體一打開就卡關。寒假來參加 AI 影音生成工作坊，不用會剪輯，跟著步驟走，三十分鐘就能做出第一支課程影片，學生看得目不轉睛。點選影片下方連結，現在就報名吧！",
+    "subtitles": "做影片好難？\n剪輯軟體一打開就卡關\n寒假 AI 影音生成工作坊\n不用會剪輯\n跟著步驟走\n30 分鐘做出第一支影片\n學生看得目不轉睛\n點選下方連結\n現在就報名吧！",
+    "voice": "溫暖親切的臺灣女聲，約 30 至 40 歲，像學校裡的資深老師在跟同事聊天；開頭語氣略帶無奈、語速稍慢，中段轉為輕快有自信，結尾以真誠帶笑的語氣邀請報名；咬字清楚、標準臺灣國語發音，不誇張、不像廣告叫賣，也不模仿任何名人聲音",
+    "music": "輕柔溫暖的原創鋼琴加木吉他配樂，約 90 BPM；第 1 鏡只有鋼琴單音、留白較多，帶一點小焦慮感；第 2 鏡木吉他加入，節奏轉為輕快明亮；第 3 鏡鋼琴與木吉他合奏漸強，情緒溫馨振奮；第 4 鏡以明亮和弦收尾，在報名字卡定格時自然結束；旁白出現時音量壓低約 -18 dB，使用免版稅或自製音樂",
+    "sfx": "第 1 鏡：滑鼠點擊聲、一聲輕嘆\n第 2 鏡：鍵盤敲擊聲、生成完成提示音「叮」\n第 3 鏡：教室安靜環境音、學生輕聲讚嘆\n第 4 鏡：字卡淡入的輕柔「咻」聲、報名按鈕放大時的輕快提示音",
+    "subtitleStyle": "圓角無襯線黑體（如思源黑體 Medium），白色字搭配半透明暖棕色圓角底框（透明度約 60%），16:9 畫面中字級約畫面高度的 5%，置於畫面下方三分之一置中，與片中字卡位置錯開不重疊；關鍵詞「30 分鐘」「報名」改用暖橘色強調；每句淡入淡出約 0.2 秒，與旁白同步出現，一次只顯示一行"
+   }
+  },
+  "brand": {
+   "seconds": 7.2,
+   "patch": {
+    "org": "阿亮老師研習團隊",
+    "logoText": "寒假 AI 影音生成工作坊",
+    "slogan": "寒假充電，影片不再難",
+    "cta": "立即點選下方連結報名",
+    "url": ""
+   }
+  }
+ }
+}
