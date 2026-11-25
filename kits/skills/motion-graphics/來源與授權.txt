@@ -1,3 +1,0 @@
-來源：https://github.com/heygen-com/hyperframes（skills/motion-graphics）
-授權：Apache-2.0，全文見 LICENSE_Apache-2.0.txt。
-影片製作包原樣附上，未修改內容；轉傳時請保留本檔與授權檔。

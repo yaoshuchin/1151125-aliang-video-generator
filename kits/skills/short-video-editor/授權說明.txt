@@ -1,5 +1,0 @@
-short-video-editor 使用的第三方素材授權
-- assets/GenSenRounded2TW-B.otf：源泉圓體 GenSenRounded2 TW Bold，ButTaiwan（https://github.com/ButTaiwan/gensen-font），SIL Open Font License 1.1，可免費商用、可隨軟體散布，不可單獨販售字型。
-- assets/silero_vad.onnx：Silero VAD（https://github.com/snakers4/silero-vad），MIT License。
-- 語音辨識模型 SenseVoice（setup.py 下載，不隨技能散布）：k2-fsa/sherpa-onnx 官方 GitHub Release（https://github.com/k2-fsa/sherpa-onnx）。
-- 技能本體：使用者提供（2026-11-15 納入「我用 Skill 建置影片」課程製作包）。
